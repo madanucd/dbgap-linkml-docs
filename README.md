@@ -8,7 +8,7 @@ summaries — one page per study, all navigable from a single sidebar.
 
 ```
 dbgap-linkml-docs/
-├── schemas/            <- drop your *_schema.yaml files here (from bdc2linkml.py)
+├── schemas/            <- drop your *_schema.yaml files here
 ├── build_docs.py        <- regenerates docs/ + mkdocs.yml from schemas/
 ├── docs/                 <- generated markdown (do not hand-edit; re-run build_docs.py)
 │   ├── index.md          <- study index / landing page
@@ -22,7 +22,7 @@ dbgap-linkml-docs/
 
 ## Adding a new study
 
-1. Copy the study's `*_schema.yaml` (from `bdc2linkml.py`) into `schemas/`.
+1. Copy the study's `*_schema.yaml` into `schemas/`.
 2. Run:
    ```bash
    python build_docs.py

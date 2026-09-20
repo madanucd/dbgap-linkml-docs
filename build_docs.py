@@ -180,8 +180,8 @@ def _render_study_page(schema: dict, filename: str) -> str:
             lines.append('')
         lines.append(f'{len(class_slots)} variable(s):')
         lines.append('')
-        lines.append('| Variable | Type | Range | Total N | Description | Values |')
-        lines.append('|---|---|---|---|---|---|')
+        lines.append('| Variable | Variable ID(s) | Type | Range | Total N | Description | Values |')
+        lines.append('|---|---|---|---|---|---|---|')
         for slot_key in class_slots:
             slot_def = slots.get(slot_key) or {}
             ann = slot_def.get('annotations') or {}
@@ -195,8 +195,10 @@ def _render_study_page(schema: dict, filename: str) -> str:
                 ann.get('value_counts', ''),
                 slot_def.get('comments') or [],
             )
+            variable_ids_cell = _md_escape_cell(', '.join(ann.get('variable_ids') or []))
             row = [
                 f'`{slot_key}`',
+                variable_ids_cell,
                 _md_escape_cell(ann.get('dbgap_type', '')),
                 range_cell,
                 _md_escape_cell(ann.get('count', '')),
