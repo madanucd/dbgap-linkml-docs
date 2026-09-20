@@ -1,5 +1,7 @@
 # dbGaP LinkML Schema Browser
 
+Documentation: https://madanucd.github.io/dbgap-linkml-docs/ 
+
 A small static docs site (built with [mkdocs](https://www.mkdocs.org/)) for
 browsing LinkML schemas generated from dbGaP `var_report.xml` variable
 summaries — one page per study, all navigable from a single sidebar.
