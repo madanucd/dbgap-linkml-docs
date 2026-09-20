@@ -58,12 +58,78 @@ def _fmt_enum_pvs(enum_def: dict, max_shown: int = 25) -> str:
     return line
 
 
+def _md_escape_prose(text) -> str:
+    """Escape square brackets in ordinary (non-table-cell) markdown prose,
+    e.g. a schema or class description paragraph, for the same reason as
+    _md_escape_cell — raw dbGaP text can contain '[...]' that would
+    otherwise risk being parsed as link syntax."""
+    if text is None:
+        return ''
+    return str(text).replace('[', '\\[').replace(']', '\\]').strip()
+
+
 def _md_escape_cell(text) -> str:
-    """Keep a value safe inside a markdown table cell (single line, no pipes)."""
+    """
+    Keep a value safe inside a markdown table cell: single line, no pipes
+    (which would be parsed as extra column separators), and square brackets
+    escaped (raw dbGaP text containing '[...]' can otherwise be misread as
+    markdown link syntax, especially if a '(...)' follows it elsewhere on
+    the same line).
+    """
     if text is None:
         return ''
     text = str(text).replace('|', '\\|').replace('\n', ' ').strip()
+    text = text.replace('[', '\\[').replace(']', '\\]')
     return text
+
+
+def _html_escape(text) -> str:
+    """Escape text for safe embedding inside raw HTML we construct (e.g.
+    inside a <details> block within a markdown table cell). Also entity-
+    encodes '|' and brackets so the table-row splitter and any accidental
+    markdown link parsing can't misinterpret it either, since this text
+    still lives on a single markdown-table source line."""
+    if text is None:
+        return ''
+    text = str(text)
+    text = (text.replace('&', '&amp;')
+                .replace('<', '&lt;')
+                .replace('>', '&gt;')
+                .replace('|', '&#124;')
+                .replace('[', '&#91;')
+                .replace(']', '&#93;')
+                .replace('\n', ' '))
+    return text.strip()
+
+
+def _fmt_values_cell(value_counts_raw: str, comments: list, max_shown: int = 40) -> str:
+    """
+    Build a collapsible <details> cell showing this SLOT's own observed
+    value=count breakdown (from its 'value_counts' annotation) plus any
+    comments — the direct dataset-to-values connection, distinct from the
+    enum's bare label list (which is shared across slots and carries no
+    per-slot counts). Returns '—' if there's nothing to show.
+    """
+    pairs = []
+    if value_counts_raw:
+        pairs = [p.strip() for p in str(value_counts_raw).split(';') if p.strip()]
+
+    if not pairs and not comments:
+        return '—'
+
+    body_parts = []
+    if pairs:
+        shown = pairs[:max_shown]
+        body_parts.append('<br>'.join(_html_escape(p) for p in shown))
+        if len(pairs) > max_shown:
+            body_parts.append(f'&hellip; and {len(pairs) - max_shown} more')
+    if comments:
+        comment_text = '; '.join(_html_escape(c) for c in comments)
+        body_parts.append(f'<em>Comment: {comment_text}</em>')
+
+    summary = f'{len(pairs)} value(s)' if pairs else 'comment'
+    body = '<br>'.join(body_parts)
+    return f'<details><summary>{summary}</summary>{body}</details>'
 
 
 # --------------------------------------------------------------------------- #
@@ -84,7 +150,7 @@ def _render_study_page(schema: dict, filename: str) -> str:
     lines.append(f'# {study_id}')
     lines.append('')
     if schema_desc:
-        lines.append(schema_desc)
+        lines.append(_md_escape_prose(schema_desc))
         lines.append('')
     if schema_url:
         lines.append(f'**dbGaP study page:** [{schema_url}]({schema_url})')
@@ -110,12 +176,12 @@ def _render_study_page(schema: dict, filename: str) -> str:
         lines.append('')
         class_desc = class_def.get('description', '')
         if class_desc:
-            lines.append(class_desc)
+            lines.append(_md_escape_prose(class_desc))
             lines.append('')
         lines.append(f'{len(class_slots)} variable(s):')
         lines.append('')
-        lines.append('| Variable | Type | Range | Total N | Description |')
-        lines.append('|---|---|---|---|---|')
+        lines.append('| Variable | Type | Range | Total N | Description | Values |')
+        lines.append('|---|---|---|---|---|---|')
         for slot_key in class_slots:
             slot_def = slots.get(slot_key) or {}
             ann = slot_def.get('annotations') or {}
@@ -125,12 +191,17 @@ def _render_study_page(schema: dict, filename: str) -> str:
                 range_cell = f'[`{range_val}`](#{_slugify(range_val)}-enum)'
             else:
                 range_cell = f'`{range_val}`'
+            values_cell = _fmt_values_cell(
+                ann.get('value_counts', ''),
+                slot_def.get('comments') or [],
+            )
             row = [
                 f'`{slot_key}`',
                 _md_escape_cell(ann.get('dbgap_type', '')),
                 range_cell,
                 _md_escape_cell(ann.get('count', '')),
                 _md_escape_cell(slot_def.get('description', '')),
+                values_cell,
             ]
             lines.append('| ' + ' | '.join(row) + ' |')
         lines.append('')
@@ -143,9 +214,10 @@ def _render_study_page(schema: dict, filename: str) -> str:
         lines.append('')
         lines.append(
             'Shared permissible-value sets, reused across variables with '
-            'identical allowed values. Each variable\'s own observed '
-            '`value_counts` are shown in its dataset table above via its '
-            'annotations — enums here list only the allowed labels.'
+            'identical allowed values. Click **Values** in a dataset table '
+            'above to see that specific variable\'s own observed counts — '
+            'enums here list only the allowed labels, since the same enum '
+            'can be shared by variables with different observed distributions.'
         )
         lines.append('')
         for enum_name in sorted(enums.keys()):
@@ -256,6 +328,19 @@ def build(schemas_folder: str, docs_folder: str, project_root: str) -> None:
             'n_enums':    len(schema.get('enums') or {}),
             'schema_url': schema.get('id', ''),
         })
+
+    # Remove any stale per-study pages left over from a schema that's since
+    # been removed/renamed in schemas_folder — otherwise they linger in
+    # docs/studies/ forever, orphaned from mkdocs.yml's nav (mkdocs warns
+    # about exactly this).
+    current_slugs = {row['slug'] for row in study_rows}
+    for existing in os.listdir(studies_dir):
+        if not existing.lower().endswith('.md'):
+            continue
+        if os.path.splitext(existing)[0] not in current_slugs:
+            stale_path = os.path.join(studies_dir, existing)
+            os.remove(stale_path)
+            print(f'  \u2717 removed stale {stale_path}')
 
     index_md = _render_index_page(study_rows)
     index_path = os.path.join(docs_folder, 'index.md')
