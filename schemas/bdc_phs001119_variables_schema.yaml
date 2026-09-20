@@ -1,0 +1,5432 @@
+id: https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001119.v1.p1
+name: BdcPhs001119VariablesSchema
+description: BioData Catalyst schema derived from BDC_phs001119_variables.xlsx.
+version: 1.0.0
+default_range: string
+license: https://creativecommons.org/publicdomain/zero/1.0/
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  bdc: https://biodatacatalyst.nhlbi.nih.gov/cde/
+default_prefix: bdc
+annotations:
+  study_id: phs001119
+classes:
+  SPIROMICS_Subject:
+    description: 'BDC dataset: SPIROMICS_Subject (source: phs001119.v1.pht013306.v1.p1.SPIROMICS_Subject.var_report.xml).'
+    slots:
+    - subject_id
+    - consent
+    - sex
+  SPIROMICS_Sample:
+    description: 'BDC dataset: SPIROMICS_Sample (source: phs001119.v1.pht013307.v1.p1.SPIROMICS_Sample.var_report.xml).'
+    slots:
+    - subject_id__spiromics_sample
+    - sample_id
+    - study
+  SPIROMICS_Subject_Phenotypes:
+    description: 'BDC dataset: SPIROMICS_Subject_Phenotypes (source: phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml).'
+    slots:
+    - subject_id__spiromics_subject_phenotypes
+    - gender
+    - race
+    - ethnicity
+    - visit
+    - year_date_visit
+    - stratum_enrolled
+    - stratum_gold
+    - eligible
+    - consent_data_spir_b
+    - consent_data_copd_b
+    - consent_genetic_spir_d
+    - consent_data_commerc_b
+    - aclidinium
+    - age_derv
+    - albuterol
+    - albuterolipratropiumbromid
+    - albuterol_neb
+    - apnea_diagnosed
+    - arformoterol
+    - average_packs_per_day
+    - avgdia
+    - avghr
+    - avgsys
+    - beclomethasone
+    - beclovent
+    - bitolterol
+    - blunisolide
+    - bmi
+    - bode_index
+    - bronch_diagnosed
+    - bsq_apnearisk
+    - budesonide
+    - budesonideformoterol
+    - cardiovascular_condition
+    - cb_diagnosed
+    - chd_derv
+    - chf_derv
+    - chronic_bronchitis
+    - chronic_bronchitis_sgr
+    - ciclesonide
+    - copdscore
+    - copd_diagnosed
+    - copd_foundation_ranking
+    - current_smoker
+    - dermatology_condition
+    - diabetes_derv
+    - emphysema_diagnosed
+    - endocrine_condition
+    - epinephrine
+    - eyes_ent_condition
+    - facit_emotionalwellbeing
+    - facit_fatiguescore
+    - facit_ftotalscore
+    - facit_ftrialoutcomeindex
+    - facit_functionalwellbeing
+    - facit_gtotal
+    - facit_physicalwellbeing
+    - facit_socialwellbeing
+    - fast_score
+    - fev1_bdresponse_hankinson
+    - fev1_bdresponse_hank_blht
+    - fev1_bdresponse_pellergino
+    - fev1_obs_pred_pct
+    - fev1_obs_pred_pct_blht
+    - fluticasone
+    - fluticasonesalmeterol
+    - fluticasonevilanterol
+    - formoterol
+    - formoterol_neb
+    - fvc_bdresponse_hankinson
+    - fvc_bdresponse_hankin_blht
+    - fvc_bdresponse_pct
+    - fvc_bdresponse_pellergino
+    - fvc_bdresponse_vol
+    - genitourinary_condition
+    - gerd_derv
+    - gi_condition
+    - gold_cat
+    - gold_cat2013
+    - gold_cat2017
+    - gold_catmmrc2013
+    - gold_catmmrc2017
+    - gold_mmrc
+    - gold_mmrc2013
+    - gold_mmrc2017
+    - gold_stage_copd_severity
+    - hds_anxietyscore
+    - hds_depressionscore
+    - ht_cm
+    - hypertension_derv
+    - ics
+    - indacterol
+    - infectious_disease_cond
+    - inhaledbronchodilators
+    - inhaledsteroids
+    - ipratbromialbutsulfa
+    - ipratropiumbromide
+    - ipratropiumbromide_neb
+    - laba
+    - laba_ics
+    - laba_lama
+    - lama
+    - levalbuterol
+    - lln_fef2575
+    - lln_fef2575_blht
+    - lln_fev1
+    - lln_fev1_blht
+    - lln_fev1_fvc
+    - lln_fev1_fvc_blht
+    - lln_fvc
+    - lln_fvc_blht
+    - lln_pefr
+    - mcq_tot
+    - menopause
+    - metaproterenol
+    - mometasone
+    - mometasoneformoterol
+    - mrc01
+    - muscular_skeletal_cond
+    - nebulizedbronchodilators
+    - neurologic_condition
+    - obesity_derv
+    - obs_fev1
+    - oncology_hema_condition
+    - osteoarthritis_derv
+    - osteoporosis_derv
+    - pct_post_fef2575
+    - pct_post_fef2575_blht
+    - pct_post_fev1
+    - pct_post_fev1fvc
+    - pct_post_fev1fvc_blht
+    - pct_post_fev1_blht
+    - pct_post_fvc
+    - pct_post_fvc_blht
+    - pct_post_pefr
+    - pct_post_pefr_blht
+    - pct_post_svc
+    - pct_post_svc_blht
+    - pct_pre_fef2575
+    - pct_pre_fef2575_blht
+    - pct_pre_fev1
+    - pct_pre_fev1fvc
+    - pct_pre_fev1fvc_blht
+    - pct_pre_fev1_blht
+    - pct_pre_fvc
+    - pct_pre_fvc_blht
+    - pct_pre_pefr
+    - pct_pre_pefr_blht
+    - pct_pre_svc
+    - pct_pre_svc_blht
+    - pirbuterol
+    - postfef2575_lt_lln
+    - postfef2575_lt_lln_blht
+    - postfev1fvc_lt_70
+    - postfev1fvc_lt_lln
+    - postfev1fvc_lt_lln_blht
+    - postfev1_lt_lln
+    - postfev1_lt_lln_blht
+    - postfvc_lt_lln
+    - postfvc_lt_lln_blht
+    - post_fef2575_derv
+    - post_fev1fvc_derv
+    - post_fev1_annualized_rate
+    - post_fev1_derv
+    - post_fevdif_derv
+    - post_fvc_derv
+    - post_pefr_derv
+    - post_rvspca_derv
+    - pred_fef2575
+    - pred_fef2575_blht
+    - pred_fev1
+    - pred_fev1fvc
+    - pred_fev1fvc_blht
+    - pred_fev1_blht
+    - pred_fvc
+    - pred_fvc_blht
+    - pred_pefr
+    - pred_pefr_blht
+    - prefef2575_lt_lln
+    - prefef2575_lt_lln_blht
+    - prefev1fvc_lt_lln
+    - prefev1fvc_lt_lln_blht
+    - prefev1_lt_lln
+    - prefev1_lt_lln_blht
+    - prefvc_lt_lln
+    - prefvc_lt_lln_blht
+    - pre_fef2575_derv
+    - pre_fev1fvc_derv
+    - pre_fev1_annualized_rate
+    - pre_fev1_derv
+    - pre_fvc_derv
+    - pre_pefr_derv
+    - psq_daysleepydysfunc
+    - psq_durationsleep
+    - psq_needmedstosleep
+    - psq_overallsleepquality
+    - psq_sleepdisturbance
+    - psq_sleepefficiency
+    - psq_sleeplatency
+    - psq_totalscore
+    - psv33_derv
+    - psychiatric_condition
+    - pulmonary_vascular_cond
+    - qvar
+    - saba
+    - saba_sama
+    - salmeterol
+    - sama
+    - sf12aggmcs
+    - sf12aggmcst
+    - sf12aggpcs
+    - sf12aggpcst
+    - sf12bp
+    - sf12bpt
+    - sf12bpz
+    - sf12gh
+    - sf12ght
+    - sf12ghz
+    - sf12mh
+    - sf12mht
+    - sf12mhz
+    - sf12pf
+    - sf12pft
+    - sf12pfz
+    - sf12re
+    - sf12ret
+    - sf12rez
+    - sf12rp
+    - sf12rpt
+    - sf12rpz
+    - sf12sf
+    - sf12sft
+    - sf12sfz
+    - sf12vt
+    - sf12vtt
+    - sf12vtz
+    - sgr_activityscore
+    - sgr_c_activityscore
+    - sgr_c_impactscore
+    - sgr_c_symptomscore
+    - sgr_c_totalscore
+    - sgr_impactscore
+    - sgr_symptomscore
+    - sgr_totalscore
+    - six_minute_walk_distance
+    - smoking_pack_years
+    - smw_dsat
+    - smw_hypox
+    - ssv33_derv
+    - stroke_derv
+    - sxsmkr2_fvc_core2
+    - sxsmkr2_fvc_core3
+    - terbutaline
+    - tiotropium
+    - titriopiumbromideolodatero
+    - totalvol_uln
+    - triamcinolone
+    - umeclidinium
+    - umeclidiniumvilanterol
+    - vanceril
+    - vsascore
+    - wt_kg
+  SPIROMICS_Genetic_Genomics_Sample_Attributes:
+    description: 'BDC dataset: SPIROMICS_Genetic_Genomics_Sample_Attributes (source:
+      phs002399.v1.pht013309.v1.p1.SPIROMICS_Genetic_Genomics_Sample_Attributes.var_report.xml).'
+    slots:
+    - sample_id
+    - body_site
+    - analyte_type
+    - is_tumor
+    - collection_age
+slots:
+  subject_id:
+    description: Spiromics deidentified ID
+    range: string
+    annotations:
+      variable_ids:
+      - phv00528686.v1.p1
+      source_files:
+      - phs001119.v1.pht013306.v1.p1.SPIROMICS_Subject.var_report.xml
+      study_id: phs001119
+      count: '2973'
+      dbgap_type: string
+  consent:
+    description: Consent group as determined by DAC
+    range: ConsentEnum
+    annotations:
+      variable_ids:
+      - phv00528687.v1.p1
+      source_files:
+      - phs001119.v1.pht013306.v1.p1.SPIROMICS_Subject.var_report.xml
+      study_id: phs001119
+      count: '2973'
+      dbgap_type: enum_integer
+      value_counts: General Research Use (GRU)=2316; General Research Use (NPU) (GRU-NPU)=319;
+        Disease-Specific (Chronic Obstructive Pulmonary Disease) (DS-COPD)=154; Disease-Specific
+        (Chronic Obstructive Pulmonary Disease, NPU) (DS-COPD-NPU)=77; General Research
+        Use (COL, NPU) (GRU-COL-NPU)=51; Disease-Specific (Chronic Obstructive Pulmonary
+        Disease, COL, NPU) (DS-COPD-COL-NPU)=35; General Research Use (COL) (GRU-COL)=13;
+        Disease-Specific (Chronic Obstructive Pulmonary Disease, COL) (DS-COPD-COL)=8
+  sex:
+    description: Biological sex
+    range: SexEnum
+    annotations:
+      variable_ids:
+      - phv00528688.v1.p1
+      source_files:
+      - phs001119.v1.pht013306.v1.p1.SPIROMICS_Subject.var_report.xml
+      study_id: phs001119
+      count: '2973'
+      dbgap_type: enum_integer
+      value_counts: Male=1576; Female=1397
+  subject_id__spiromics_sample:
+    description: Spiromics deidentified ID
+    range: string
+    annotations:
+      variable_ids:
+      - phv00528689.v1.p1
+      source_files:
+      - phs001119.v1.pht013307.v1.p1.SPIROMICS_Sample.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: string
+  sample_id:
+    description: SAMPLE ID USED BY GWAS CENTER
+    range: string
+    annotations:
+      variable_ids:
+      - phv00528690.v1.p1
+      - phv00528955.v1.p1
+      source_files:
+      - phs001119.v1.pht013307.v1.p1.SPIROMICS_Sample.var_report.xml
+      - phs002399.v1.pht013309.v1.p1.SPIROMICS_Genetic_Genomics_Sample_Attributes.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: string
+  study:
+    description: Study accession number
+    range: StudyEnum
+    annotations:
+      variable_ids:
+      - phv00528691.v1.p1
+      source_files:
+      - phs001119.v1.pht013307.v1.p1.SPIROMICS_Sample.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: string
+      value_counts: phs002399.v1.p1=2611
+  subject_id__spiromics_subject_phenotypes:
+    description: Deidentified Spiromics subject ID
+    range: string
+    annotations:
+      variable_ids:
+      - phv00528692.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: string
+  gender:
+    description: Gender
+    range: SexEnum
+    annotations:
+      variable_ids:
+      - phv00528693.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: Male=6304; Female=5588
+  race:
+    description: Race
+    range: RaceEnum
+    annotations:
+      variable_ids:
+      - phv00528694.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: White=9048; Black=2304; Mixed=276; Asian=132; Missing=72; American
+        Indian=56; Pacific Isander=4
+  ethnicity:
+    description: Ethnicity
+    range: EthnicityEnum
+    annotations:
+      variable_ids:
+      - phv00528695.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11888'
+      dbgap_type: enum_integer
+      value_counts: Non-hispanic=11264; Hispanic=624
+  visit:
+    description: VISIT
+    range: VisitEnum
+    annotations:
+      variable_ids:
+      - phv00528696.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: string
+      value_counts: VISIT_2=2973; VISIT_1=2973; VISIT_4=2973; VISIT_3=2973
+  year_date_visit:
+    description: YEAR_DATE_VISIT
+    range: YearDateVisitEnum
+    annotations:
+      variable_ids:
+      - phv00528697.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7759'
+      dbgap_type: integer
+      value_counts: 2014=2069; 2013=1805; 2015=1740; 2012=1245; 2011=686; 2016=185;
+        2010=29
+  stratum_enrolled:
+    description: Stratum at baseline
+    range: StratumEnrolledEnum
+    annotations:
+      variable_ids:
+      - phv00528698.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: Mild/Moderate GOLD Stage COPD Severity (GOLD_Stage_COPD_Severity
+        is 1 or 2)=4820; FEV1/FVC greater than or equal to 0.70 (GOLD_Stage_COPD_Severity
+        is 0)=3764; Severe/Very Severe GOLD Stage COPD Severity (GOLD_Stage_COPD_Severity=3
+        or 4)=2500; Non-Smokers (GOLD_Stage_COPD_Severity is .N)=808
+  stratum_gold:
+    description: Stratum based on GOLD Stage of COPD Severity at baseline
+    range: StratumEnrolledEnum
+    annotations:
+      variable_ids:
+      - phv00528699.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11888'
+      dbgap_type: enum_integer
+      value_counts: Mild/Moderate GOLD Stage COPD Severity (GOLD_Stage_COPD_Severity
+        is 1 or 2)=4884; FEV1/FVC greater than or equal to 0.70 (GOLD_Stage_COPD_Severity
+        is 0)=3704; Severe/Very Severe GOLD Stage COPD Severity (GOLD_Stage_COPD_Severity=3
+        or 4)=2492; Non-Smokers (GOLD_Stage_COPD_Severity is .N)=808
+  eligible:
+    description: Eligible and non-missing Stratum and excluding Not_to_be_stratified
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528700.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: Yes=11892
+  consent_data_spir_b:
+    description: SPIROMICS data consent type
+    range: ConsentDataSpirBEnum
+    annotations:
+      variable_ids:
+      - phv00528701.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: SPIROMICS and non-SPIROMICS investigators=11464; SPIROMICS investigators
+        only=428
+  consent_data_copd_b:
+    description: COPD data consent type
+    range: ConsentDataCopdBEnum
+    annotations:
+      variable_ids:
+      - phv00528702.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: COPD and non-COPD research=10796; COPD research only=1096
+  consent_genetic_spir_d:
+    description: Genetic consent to Spiromics
+    range: ConsentGeneticSpirDEnum
+    annotations:
+      variable_ids:
+      - phv00528703.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: Include non-Spiromics=11076; No consent at all=512; Spiromics
+        only=304
+  consent_data_commerc_b:
+    description: Commercial data consent type
+    range: ConsentDataCommercBEnum
+    annotations:
+      variable_ids:
+      - phv00528704.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '11892'
+      dbgap_type: enum_integer
+      value_counts: Non commercial and commercial=9964; Non commercial only=1884;
+        No consent at all=44
+  aclidinium:
+    description: 'Inhaled bronchodilator used in the last 3 months: aclidinium (Tudorza)
+      at Visit includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528705.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '43'
+      dbgap_type: string
+      value_counts: Yes=43
+  age_derv:
+    description: Age in years at visit based on date of birth and date of visit
+    range: AgeDervEnum
+    annotations:
+      variable_ids:
+      - phv00528706.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: integer
+      value_counts: 67=405; 68=375; 66=369; 71=333; 65=325; 70=319; 69=314; 72=311;
+        73=290; 74=285
+  albuterol:
+    description: 'Inhaled bronchodilators used in last 3 months: albuterol (Proventil,
+      Ventolin, ProAir) at Visit includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528707.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7572'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; Yes=2401; No=1178
+  albuterolipratropiumbromid:
+    description: 'Nebulized bronchodilators used in last 3 months: albuterol and ipratropium
+      bromide (DuoNeb) at Visit includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528708.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7618'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=6783; No=620; Yes=215
+  albuterol_neb:
+    description: 'Nebulized bronchodilators used in last 3 months: albuterol (Proventil,
+      Ventolin, ProAir) at Visit includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528709.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7622'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=6782; Yes=564; No=276
+  apnea_diagnosed:
+    description: Sleep apnea diagnosed by a health professional reported
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528710.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7543'
+      dbgap_type: enum_integer
+      value_counts: No=6904; Yes=639
+  arformoterol:
+    description: 'Nebulized bronchodilators used in last 3 months: arformoterol (Brovana)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528711.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7611'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=6783; No=785; Yes=43
+  average_packs_per_day:
+    description: Average number of packs smoked per day
+    range: AveragePacksPerDayEnum
+    annotations:
+      variable_ids:
+      - phv00528712.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7519'
+      dbgap_type: decimal
+      value_counts: 0=3225; 1=1670; 1.5=598; 2=462; 0.5=420; 0.75=252; 0.25=118; 3=73;
+        0.15=68; 0.6=66
+  avgdia:
+    description: Average Diastolic Blood Pressure
+    range: AvgdiaEnum
+    annotations:
+      variable_ids:
+      - phv00528713.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 80=206; 79=201; 70=200; 78=180; 77=176; 72=175; 81=172; 76=169;
+        75=161; 69=160
+  avghr:
+    description: Average Heart Rate
+    range: AvghrEnum
+    annotations:
+      variable_ids:
+      - phv00528714.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7687'
+      dbgap_type: decimal
+      value_counts: 66.5=135; 72=134; 70=133; 73=132; 75=132; 64.5=129; 68=129; 66=128;
+        65=126; 61=123
+  avgsys:
+    description: Average Systolic Blood Pressure
+    range: AvgsysEnum
+    annotations:
+      variable_ids:
+      - phv00528715.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 120=139; 119=129; 124=128; 118=124; 126=120; 121=117; 130=116;
+        122=116; 117=109; 131=108
+  beclomethasone:
+    description: 'Inhaled steroids used in the last 3 months: beclomethasone (Qvar,
+      Vanceril, Beclovent) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528716.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7506'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5283; No=2045; Yes=178
+  beclovent:
+    description: 'Inhaled steroids used in last 3 months: Beclovent (beclomethasone)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528717.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7497'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5284; No=2210; Yes=3
+  bitolterol:
+    description: 'Inhaled bronchodilators used in last 3 months: bitolterol (Tornalate)
+      includes Other inhaled steroids or bronchodilators'
+    range: BitolterolEnum
+    annotations:
+      variable_ids:
+      - phv00528718.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7393'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3400
+  blunisolide:
+    description: 'Inhaled steroids used in last 3 months: blunisolide (AeroBid) includes
+      Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528719.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7491'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5284; No=2205; Yes=2
+  bmi:
+    description: Body Mass Index
+    range: BmiEnum
+    annotations:
+      variable_ids:
+      - phv00528720.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7751'
+      dbgap_type: decimal
+      value_counts: 26.080246914=10; 23.937671723=9; 25.964542172=8; 18.365472911=8;
+        31.25=8; 22.78726319=8; 22.582709172=8; 24.801587302=7; 25.390625=7; 23.875114784=7
+  bode_index:
+    description: BODE Index
+    range: BodeIndexEnum
+    annotations:
+      variable_ids:
+      - phv00528721.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7249'
+      dbgap_type: integer
+      value_counts: 0=3482; 1=1362; 2=778; 3=567; 4=413; 5=281; 6=198; 7=101; 8=44;
+        9=21
+  bronch_diagnosed:
+    description: Attack of bronchitis diagnosed by a health professional reported
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528722.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7528'
+      dbgap_type: enum_integer
+      value_counts: No=5753; Yes=1755; Unknown=20
+  bsq_apnearisk:
+    description: Berlin Sleep apnea risk
+    range: BsqApneariskEnum
+    annotations:
+      variable_ids:
+      - phv00528723.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '5901'
+      dbgap_type: enum_integer
+      value_counts: 2 or more BSQ categories total 2 or more points=3271; 1 or no
+        BSQ categories total 2 or more points=2630
+  budesonide:
+    description: 'Inhaled steroids used in last 3 months: budesonide (Pulmicort) includes
+      Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528724.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7498'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5284; No=2134; Yes=80
+  budesonideformoterol:
+    description: 'Inhaled combination ICS/BD used in last 3 months: budesonide/formoterol
+      (Symbicort) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528725.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7430'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3773; No=2891; Yes=766
+  cardiovascular_condition:
+    description: History of Cardiovascular condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528726.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7693'
+      dbgap_type: enum_integer
+      value_counts: No=3887; Yes=3806
+  cb_diagnosed:
+    description: Chronic bronchitis diagnosed by a health professional reported
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528727.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7545'
+      dbgap_type: enum_integer
+      value_counts: No=6875; Yes=664; Unknown=6
+  chd_derv:
+    description: Derived CHD - Presence of angina, CAD, MI, bypass, angioplasty
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528728.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7694'
+      dbgap_type: enum_integer
+      value_counts: No=6795; Yes=899
+  chf_derv:
+    description: Derived CHF
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528729.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7697'
+      dbgap_type: enum_integer
+      value_counts: No=7569; Yes=128
+  chronic_bronchitis:
+    description: Chronic Bronchitis identified
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528730.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7566'
+      dbgap_type: enum_integer
+      value_counts: No=6109; Yes=1457
+  chronic_bronchitis_sgr:
+    description: Chronic Bronchitis defined by questions 1 and 2 on the SGRQ
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528731.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7328'
+      dbgap_type: enum_integer
+      value_counts: No=4457; Yes=2871
+  ciclesonide:
+    description: 'Inhaled steroid used in the last 3 months: ciclesonide (Alvesco)
+      includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528732.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '6'
+      dbgap_type: string
+      value_counts: Yes=6
+  copdscore:
+    description: COPD Assessment Test Score
+    range: CopdscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528733.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7365'
+      dbgap_type: integer
+      value_counts: 7=345; 9=339; 6=335; 5=331; 11=328; 8=310; 10=302; 3=297; 15=295;
+        12=290
+  copd_diagnosed:
+    description: COPD diagnosed by a health professional reported
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528734.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7586'
+      dbgap_type: enum_integer
+      value_counts: No=5883; Yes=1699; Unknown=4
+  copd_foundation_ranking:
+    description: COPD Foundation disease ranking
+    range: CopdFoundationRankingEnum
+    annotations:
+      variable_ids:
+      - phv00528735.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7675'
+      dbgap_type: string
+      value_counts: SG1=4551; SG0=2584; SG2=300; SGU=237; SG3=3
+  current_smoker:
+    description: Current smoking status
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528736.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7673'
+      dbgap_type: enum_integer
+      value_counts: No=5133; Yes=2540
+  dermatology_condition:
+    description: History of Dermatology condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528737.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7673'
+      dbgap_type: enum_integer
+      value_counts: No=6181; Yes=1492
+  diabetes_derv:
+    description: Diabetes condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528738.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7695'
+      dbgap_type: enum_integer
+      value_counts: No=6760; Yes=935
+  emphysema_diagnosed:
+    description: Emphysema diagnosed by a health professional reported
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528739.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7552'
+      dbgap_type: enum_integer
+      value_counts: No=6479; Yes=1069; Unknown=4
+  endocrine_condition:
+    description: History of Endocrine condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528740.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7694'
+      dbgap_type: enum_integer
+      value_counts: No=6105; Yes=1589
+  epinephrine:
+    description: 'Inhaled bronchodilators used in last 3 months: epinephrine (Primatene,
+      Bronkaid) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528741.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7395'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3398; Yes=4
+  eyes_ent_condition:
+    description: History of Eyes, Ear, Nose, or Throat condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528742.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7705'
+      dbgap_type: enum_integer
+      value_counts: Yes=4842; No=2863
+  facit_emotionalwellbeing:
+    description: FACIT emotional wellbeing score
+    range: FacitEmotionalwellbeingEnum
+    annotations:
+      variable_ids:
+      - phv00528743.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '6984'
+      dbgap_type: decimal
+      value_counts: 20=1023; 24=850; 19=620; 18=553; 21=546; 22=534; 23=485; 17=466;
+        16=359; 15=272
+  facit_fatiguescore:
+    description: FACIT fatigue score
+    range: FacitFatiguescoreEnum
+    annotations:
+      variable_ids:
+      - phv00528744.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7624'
+      dbgap_type: decimal
+      value_counts: 52=518; 50=425; 49=391; 48=357; 44=344; 51=320; 46=314; 47=295;
+        45=282; 41=265
+  facit_ftotalscore:
+    description: FACIT F total score
+    range: FacitFtotalscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528745.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '6866'
+      dbgap_type: decimal
+      value_counts: 134=101; 140=97; 135=91; 120=91; 130=91; 139=89; 147=87; 126=87;
+        127=85; 141=85
+  facit_ftrialoutcomeindex:
+    description: FACIT F trial outcome index score
+    range: FacitFtrialoutcomeindexEnum
+    annotations:
+      variable_ids:
+      - phv00528746.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7576'
+      dbgap_type: decimal
+      value_counts: 108=204; 104=171; 99=163; 100=158; 96=154; 101=153; 98=148; 92=145;
+        95=144; 93=143
+  facit_functionalwellbeing:
+    description: FACIT functional wellbeing score
+    range: FacitFunctionalwellbeingEnum
+    annotations:
+      variable_ids:
+      - phv00528747.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7631'
+      dbgap_type: decimal
+      value_counts: 28=753; 21=493; 24=407; 19=405; 20=359; 18=344; 26=343; 22=317;
+        23=313; 25=309
+  facit_gtotal:
+    description: FACIT G total score
+    range: FacitGtotalEnum
+    annotations:
+      variable_ids:
+      - phv00528748.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '6791'
+      dbgap_type: decimal
+      value_counts: 84=139; 89=133; 92=128; 86=127; 90=126; 91=125; 95=125; 82=125;
+        87=124; 80=123
+  facit_physicalwellbeing:
+    description: FACIT physical wellbeing score
+    range: FacitPhysicalwellbeingEnum
+    annotations:
+      variable_ids:
+      - phv00528749.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7656'
+      dbgap_type: decimal
+      value_counts: 28=1259; 27=1178; 26=996; 25=757; 24=569; 23=463; 22=434; 21=337;
+        20=275; 19=199
+  facit_socialwellbeing:
+    description: FACIT social wellbeing score
+    range: FacitSocialwellbeingEnum
+    annotations:
+      variable_ids:
+      - phv00528750.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7481'
+      dbgap_type: decimal
+      value_counts: 28=1068; 21=493; 24=353; 22=322; 20=321; 26=305; 23=264; 19=264;
+        18=257; 27=251
+  fast_score:
+    description: FAST Alcohol Screening Score
+    range: BodeIndexEnum
+    annotations:
+      variable_ids:
+      - phv00528751.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '5014'
+      dbgap_type: integer
+      value_counts: 0=4075; 1=364; 2=190; 4=125; 3=91; 5=62; 6=43; 8=22; 7=21; 9=10
+  fev1_bdresponse_hankinson:
+    description: FEV1 Bronchodilator response, percent Hankinson 1999
+    range: Fev1BdresponseHankinsonEnum
+    annotations:
+      variable_ids:
+      - phv00528752.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7677'
+      dbgap_type: decimal
+      value_counts: 0=2; 4.9223138293=2; 16.855380148=2; 8.9120865177=2; 3.0887473046=2;
+        32.23151993=1; 6.0560839799=1; -0.444495408=1; 3.7347571396=1; 0.9208363635=1
+  fev1_bdresponse_hank_blht:
+    description: FEV1 Bronchodilator response, percent Hankinson 1999 using Visit
+      1 height
+    range: Fev1BdresponseHankinsonEnum
+    annotations:
+      variable_ids:
+      - phv00528753.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7677'
+      dbgap_type: decimal
+      value_counts: 0=2; 4.9223138293=2; 16.855380148=2; 8.9120865177=2; 3.0887473046=2;
+        32.23151993=1; 6.0560839799=1; -0.444495408=1; 3.7347571396=1; 0.9208363635=1
+  fev1_bdresponse_pellergino:
+    description: FEV1 Bronchodilator response, volume Pellegrino 2005
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528754.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7682'
+      dbgap_type: enum_integer
+      value_counts: False=5538; True=2144
+  fev1_obs_pred_pct:
+    description: Ratio of Observed FEV1 to Predicted
+    range: Fev1ObsPredPctEnum
+    annotations:
+      variable_ids:
+      - phv00528755.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7711'
+      dbgap_type: decimal
+      value_counts: 86.09181264=3; 20.206040208=2; 96.401945098=2; 99.237060026=2;
+        66.976825108=2; 53.284533798=2; 94.666201358=2; 52.267630064=2; 24.337843592=2;
+        105.99962057=2
+  fev1_obs_pred_pct_blht:
+    description: Ratio of Observed FEV1 to Predicted using Visit 1 height
+    range: Fev1ObsPredPctBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528756.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7721'
+      dbgap_type: decimal
+      value_counts: 86.09181264=3; 20.206040208=2; 83.360334901=2; 94.666201358=2;
+        91.777548382=2; 24.337843592=2; 105.99962057=2; 95.518177928=2; 91.037361369=2;
+        59.88671859=2
+  fluticasone:
+    description: 'Inhaled steroids used in last 3 months: fluticasone (Flovent) includes
+      Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528757.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7503'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5283; No=2070; Yes=150
+  fluticasonesalmeterol:
+    description: 'Inhaled bronchodilators used in last 3 months: fluticasone/salmeterol
+      (Advair Diskus) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528758.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7458'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3773; No=2357; Yes=1328
+  fluticasonevilanterol:
+    description: 'Inhaled combination ICS/BD used in the last 3 months: fluticasone/vilanterol
+      (Breo Ellipta) includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528759.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '26'
+      dbgap_type: string
+      value_counts: Yes=26
+  formoterol:
+    description: 'Inhaled bronchodilators used in last 3 months: formoterol (Foradil)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528760.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7409'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3319; Yes=97
+  formoterol_neb:
+    description: 'Nebulized bronchodilators used in last 3 months: formoterol (Perforomist)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528761.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7610'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=6783; No=796; Yes=31
+  fvc_bdresponse_hankinson:
+    description: FVC Bronchodilator response, percent Hankinson 1999
+    range: FvcBdresponseHankinsonEnum
+    annotations:
+      variable_ids:
+      - phv00528762.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7677'
+      dbgap_type: decimal
+      value_counts: -2.646884185=2; 18.776539764=2; 8.0695076428=1; 9.6881297149=1;
+        10.138190428=1; 9.0532655382=1; 1.9109329911=1; 4.8986406486=1; 26.243955575=1;
+        6.7137628894=1
+  fvc_bdresponse_hankin_blht:
+    description: FVC Bronchodilator response, percent Hankinson 1999 using Visit 1
+      height
+    range: FvcBdresponseHankinsonEnum
+    annotations:
+      variable_ids:
+      - phv00528763.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7677'
+      dbgap_type: decimal
+      value_counts: -2.646884185=2; 18.776539764=2; 8.0695076428=1; 9.6881297149=1;
+        10.138190428=1; 9.0532655382=1; 1.9109329911=1; 4.8986406486=1; 26.243955575=1;
+        6.7137628894=1
+  fvc_bdresponse_pct:
+    description: FVC Bronchodilator response, percent
+    range: FvcBdresponsePctEnum
+    annotations:
+      variable_ids:
+      - phv00528764.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7682'
+      dbgap_type: decimal
+      value_counts: 11.111111111=2; 2.9891304348=2; 10.460251046=2; 10.254118833=1;
+        31.155962087=1; 10.037526513=1; 14.56344536=1; 26.251010132=1; -1.533565924=1;
+        -0.690583187=1
+  fvc_bdresponse_pellergino:
+    description: FVC Bronchodilator response, volume Pellegrino 2005
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528765.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7682'
+      dbgap_type: enum_integer
+      value_counts: False=5823; True=1859
+  fvc_bdresponse_vol:
+    description: FVC Bronchodilator response, volume
+    range: FvcBdresponseVolEnum
+    annotations:
+      variable_ids:
+      - phv00528766.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7682'
+      dbgap_type: decimal
+      value_counts: 73.8=7; -60.3=6; 106.6=6; -39.9=6; 78.1=6; 236.2=6; 40.3=5; 81.6=5;
+        43.7=5; 150.5=5
+  genitourinary_condition:
+    description: History of Genitourinary and Reproductive condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528767.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7649'
+      dbgap_type: enum_integer
+      value_counts: No=5814; Yes=1835
+  gerd_derv:
+    description: Gastroesophageal reflux disease (GERD)
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528768.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7698'
+      dbgap_type: enum_integer
+      value_counts: No=6166; Yes=1532
+  gi_condition:
+    description: History of Gastrointestinal condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528769.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7693'
+      dbgap_type: enum_integer
+      value_counts: No=5130; Yes=2563
+  gold_cat:
+    description: GOLD status using the revised criteria and CAT
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528770.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4975'
+      dbgap_type: enum_integer
+      value_counts: Low risk and more symptoms=1815; High risk and more symptoms=1487;
+        Low risk and fewer symptoms=1271; High risk and fewer symptoms=402
+  gold_cat2013:
+    description: GOLD status revised using the 2013 guidelines and CAT
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528771.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4544'
+      dbgap_type: enum_integer
+      value_counts: Low risk and more symptoms=1688; High risk and more symptoms=1565;
+        Low risk and fewer symptoms=1062; High risk and fewer symptoms=229
+  gold_cat2017:
+    description: GOLD status using the 2017 guidelines and CAT
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528772.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4524'
+      dbgap_type: enum_integer
+      value_counts: Low risk and more symptoms=2528; Low risk and fewer symptoms=1206;
+        High risk and more symptoms=706; High risk and fewer symptoms=84
+  gold_catmmrc2013:
+    description: GOLD status revised using the 2013 guidelines and CAT or mMRC
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528773.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4706'
+      dbgap_type: enum_integer
+      value_counts: Low risk and fewer symptoms=2347; High risk and more symptoms=926;
+        High risk and fewer symptoms=918; Low risk and more symptoms=515
+  gold_catmmrc2017:
+    description: GOLD status using the 2017 guidelines and CAT or mMRC
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528774.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4686'
+      dbgap_type: enum_integer
+      value_counts: Low risk and fewer symptoms=2868; Low risk and more symptoms=1004;
+        High risk and more symptoms=428; High risk and fewer symptoms=386
+  gold_mmrc:
+    description: GOLD status using the revised criteria and mMRC
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528775.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4975'
+      dbgap_type: enum_integer
+      value_counts: Low risk and fewer symptoms=2464; High risk and fewer symptoms=975;
+        High risk and more symptoms=914; Low risk and more symptoms=622
+  gold_mmrc2013:
+    description: GOLD status using the 2013 guidelines and mMRC
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528776.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4685'
+      dbgap_type: enum_integer
+      value_counts: Low risk and fewer symptoms=2287; High risk and more symptoms=957;
+        High risk and fewer symptoms=880; Low risk and more symptoms=561
+  gold_mmrc2017:
+    description: GOLD status using the 2017 guidelines and mMRC
+    range: GoldCatEnum
+    annotations:
+      variable_ids:
+      - phv00528777.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4665'
+      dbgap_type: enum_integer
+      value_counts: Low risk and fewer symptoms=2782; Low risk and more symptoms=1073;
+        High risk and more symptoms=436; High risk and fewer symptoms=374
+  gold_stage_copd_severity:
+    description: GOLD Stage of COPD Severity
+    range: GoldStageCopdSeverityEnum
+    annotations:
+      variable_ids:
+      - phv00528778.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7866'
+      dbgap_type: enum_integer
+      value_counts: No airflow limitation=2227; Moderate airflow limitation=2164;
+        Mild airflow limitation=1175; Severe airflow limitation=1056; N=808; Very
+        severe airflow limitation=436
+  hds_anxietyscore:
+    description: HADS Anxiety Score
+    range: BodeIndexEnum
+    annotations:
+      variable_ids:
+      - phv00528779.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7654'
+      dbgap_type: integer
+      value_counts: 3=848; 4=746; 2=717; 6=701; 0=696; 1=696; 5=686; 7=611; 8=497;
+        9=358
+  hds_depressionscore:
+    description: HADS Depression Score
+    range: BodeIndexEnum
+    annotations:
+      variable_ids:
+      - phv00528780.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7653'
+      dbgap_type: integer
+      value_counts: 1=1189; 3=936; 2=926; 0=837; 4=779; 5=607; 6=591; 7=457; 8=357;
+        9=272
+  ht_cm:
+    description: Measured height
+    range: HtCmEnum
+    annotations:
+      variable_ids:
+      - phv00528781.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7757'
+      dbgap_type: integer
+      value_counts: 165=361; 163=348; 175=320; 168=318; 170=316; 173=313; 178=304;
+        160=287; 180=275; 167=273
+  hypertension_derv:
+    description: Hypertension
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528782.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7697'
+      dbgap_type: enum_integer
+      value_counts: No=4837; Yes=2860
+  ics:
+    description: Inhaled corticosteroids monoinhaler in the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528783.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7539'
+      dbgap_type: enum_integer
+      value_counts: No=7066; Yes=473
+  indacterol:
+    description: 'Inhaled bronchodilator used in the last 3 months: indacterol (Arcapta)
+      includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528784.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '3'
+      dbgap_type: string
+      value_counts: Yes=3
+  infectious_disease_cond:
+    description: History of Infectious disease condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528785.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7681'
+      dbgap_type: enum_integer
+      value_counts: No=7225; Yes=456
+  inhaledbronchodilators:
+    description: Inhaled bronchodilators used in the last three months
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528786.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7666'
+      dbgap_type: enum_integer
+      value_counts: No=3988; Yes=3673; unknown=5
+  inhaledsteroids:
+    description: Inhaled steroids used in the last three months
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528787.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7665'
+      dbgap_type: enum_integer
+      value_counts: No=5277; Yes=2381; unknown=7
+  ipratbromialbutsulfa:
+    description: 'Inhaled bronchodilators used in last 3 months: ipratropium bromide/albuterol
+      sulfate (Combivent) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528788.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7417'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3084; Yes=340
+  ipratropiumbromide:
+    description: 'Inhaled bronchodilators used in last 3 months: ipratropium bromide
+      (Atrovent) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528789.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7417'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3248; Yes=176
+  ipratropiumbromide_neb:
+    description: 'Nebulized bronchodilators used in last 3 months: ipratropium bromide
+      (Atrovent) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528790.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7613'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=6783; No=768; Yes=62
+  laba:
+    description: Long-acting bronchodilator monoinhaler in the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528791.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7657'
+      dbgap_type: enum_integer
+      value_counts: No=7424; Yes=233
+  laba_ics:
+    description: Combined long-acting bronchodilator and inhaled corticosteroids in
+      the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528792.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7513'
+      dbgap_type: enum_integer
+      value_counts: No=5298; Yes=2215
+  laba_lama:
+    description: Combined long-acting bronchodilator and muscarinic antagonist in
+      the last 3 months
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528793.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7'
+      dbgap_type: string
+      value_counts: Yes=7
+  lama:
+    description: Long-acting muscarinic antagonist monoinhaler in the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528794.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7537'
+      dbgap_type: enum_integer
+      value_counts: No=5519; Yes=2018
+  levalbuterol:
+    description: 'Inhaled bronchodilators used in last 3 months: levalbuterol (Tomalate,
+      Xopenex) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528795.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7399'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3992; No=3368; Yes=39
+  lln_fef2575:
+    description: LLN for FEF25%-75% (Computed based on gender, race/ethnicity, age,
+      and Visit 1 height)
+    range: LlnFef2575Enum
+    annotations:
+      variable_ids:
+      - phv00528796.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 1.069206=24; 1.03130096=21; 1.08125096=20; 1.119156=20; 0.75909838=19;
+        1.169106=18; 0.8658795=17; 0.61857838=17; 0.80513838=16; 0.8202395=16
+  lln_fef2575_blht:
+    description: LLN for FEF25%-75% (Computed based on gender, race/ethnicity, rage,
+      and height) using Visit 1 height
+    range: LlnFef2575Enum
+    annotations:
+      variable_ids:
+      - phv00528797.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 1.069206=24; 1.03130096=21; 1.08125096=20; 1.119156=20; 0.75909838=19;
+        1.169106=18; 0.8658795=17; 0.61857838=17; 0.80513838=16; 0.8202395=16
+  lln_fev1:
+    description: LLN for FEV1 (computed based on gender, race/ethnicity, age, and
+      Visit 1 height)
+    range: LlnFev1Enum
+    annotations:
+      variable_ids:
+      - phv00528798.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 2.66915=24; 2.58604388=21; 2.62194988=20; 2.705056=20; 1.75716427=19;
+        2.740618=18; 1.66543627=17; 1.87727275=17; 2.23527703=16; 1.81637627=16
+  lln_fev1_blht:
+    description: LLN for FEV1 (computed based on gender, race/ethnicity, age, and
+      height) using Visit 1 height
+    range: LlnFev1Enum
+    annotations:
+      variable_ids:
+      - phv00528799.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 2.66915=24; 2.58604388=21; 2.62194988=20; 2.705056=20; 1.75716427=19;
+        2.740618=18; 1.66543627=17; 1.87727275=17; 2.23527703=16; 1.81637627=16
+  lln_fev1_fvc:
+    description: LLN for FEV1/FVC (%) (computed based on gender, race/ethnicity, age,
+      and Visit 1 height)
+    range: LlnFev1FvcEnum
+    annotations:
+      variable_ids:
+      - phv00528800.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 64.5458=205; 64.3392=180; 64.7524=176; 63.5128=169; 63.7194=167;
+        64.1326=155; 64.959=151; 63.3062=151; 63.926=149; 66.7775=145
+  lln_fev1_fvc_blht:
+    description: LLN for FEV1/FVC (%) (computed based on gender, race/ethnicity, age,
+      and height) using Visit 1 height
+    range: LlnFev1FvcEnum
+    annotations:
+      variable_ids:
+      - phv00528801.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 64.5458=205; 64.3392=180; 64.7524=176; 63.5128=169; 63.7194=167;
+        64.1326=155; 64.959=151; 63.3062=151; 63.926=149; 66.7775=145
+  lln_fvc:
+    description: LLN for FVC (computed based on gender, race/ethnicity, age, and Visit
+      1 height)
+    range: LlnFvcEnum
+    annotations:
+      variable_ids:
+      - phv00528802.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 3.727219=24; 3.6148428=21; 3.762356=20; 3.6499798=20; 2.39011862=19;
+        3.796955=18; 2.28692462=17; 2.5351135=17; 3.19346755=16; 2.42298862=16
+  lln_fvc_blht:
+    description: LLN for FVC (computed based on gender, race/ethnicity, age, and height)
+      using Visit 1 height
+    range: LlnFvcEnum
+    annotations:
+      variable_ids:
+      - phv00528803.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 3.727219=24; 3.6148428=21; 3.762356=20; 3.6499798=20; 2.39011862=19;
+        3.796955=18; 2.28692462=17; 2.5351135=17; 3.19346755=16; 2.42298862=16
+  lln_pefr:
+    description: LLN FOR PEF RATE (COMPUTED BASED ON GENDER, RACE/ETHNICITY, AGE,
+      AND VISIT 1 HEIGHT)
+    range: LlnPefrEnum
+    annotations:
+      variable_ids:
+      - phv00528804.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 6.468091=24; 6.3418244=21; 6.4321374=20; 6.558404=20; 4.09867812=19;
+        6.646115=18; 4.316097=17; 3.87662112=17; 4.23640612=16; 4.248264=16
+  mcq_tot:
+    description: EASE OF COUGH AND SPUTUM CLEARANCE Total score
+    range: McqTotEnum
+    annotations:
+      variable_ids:
+      - phv00528805.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7502'
+      dbgap_type: integer
+      value_counts: 5=1694; 6=796; 9=773; 8=735; 7=667; 10=634; 11=582; 12=452; 13=350;
+        14=252
+  menopause:
+    description: Participant has reached menopause
+    range: MenopauseEnum
+    annotations:
+      variable_ids:
+      - phv00528806.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '9579'
+      dbgap_type: enum_integer
+      value_counts: Participant is male=6304; Participant is female and has reached
+        menopause=2932; Participant is female and has not reached menopause=255; Participant
+        is female and does not know if they have reached menopause=88
+  metaproterenol:
+    description: 'Inhaled bronchodilators used in last 3 months: Metaproterenol (Alupent,
+      Metaprel) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528807.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7395'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3398; Yes=4
+  mometasone:
+    description: 'Inhaled steroid used in the last 3 months: mometasone furoate (Asmanex)
+      includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528808.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '56'
+      dbgap_type: string
+      value_counts: Yes=56
+  mometasoneformoterol:
+    description: 'Inhaled combination ICS/BD used in the last 3 months: mometasone/formoterol
+      (Dulera) includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528809.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '133'
+      dbgap_type: string
+      value_counts: Yes=133
+  mrc01:
+    description: Modified MRC Dyspnea Scale - Describe shortness of breath
+    range: Mrc01Enum
+    annotations:
+      variable_ids:
+      - phv00528810.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7700'
+      dbgap_type: enum_integer
+      value_counts: I get short of breath when hurryin on the level or walking up
+        a slight hill=3109; I only get breathless with strenuous exercise=2693; I
+        walk slower than people of the same age on the level because of breathlessness
+        or have to stop for breath when walking at my own pace on the level=1126;
+        I stop for breath after walking about 100 yards or after a few minutes on
+        the level=607; I am too breathless to leave the house=165
+  muscular_skeletal_cond:
+    description: History of Muscular/skeletal condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528811.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7689'
+      dbgap_type: enum_integer
+      value_counts: No=3951; Yes=3738
+  nebulizedbronchodilators:
+    description: Nebulized bronchodilators usage in the last three months
+    range: BronchDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528812.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7658'
+      dbgap_type: enum_integer
+      value_counts: No=6761; Yes=875; unknown=22
+  neurologic_condition:
+    description: History of neurologic condition reported
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528813.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7697'
+      dbgap_type: enum_integer
+      value_counts: No=6768; Yes=929
+  obesity_derv:
+    description: Obesity - BMI greater than or equal to 30
+    range: ObesityDervEnum
+    annotations:
+      variable_ids:
+      - phv00528814.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7751'
+      dbgap_type: enum_integer
+      value_counts: BMI less than 30=5025; BMI greater than or equal to 30=2726
+  obs_fev1:
+    description: Observed FEV1 (post-bronchodilator)
+    range: ObsFev1Enum
+    annotations:
+      variable_ids:
+      - phv00528815.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7721'
+      dbgap_type: decimal
+      value_counts: 2.14=41; 2.2=40; 1.03=39; 1.8=39; 2.09=39; 1.82=38; 1.59=38; 1.87=38;
+        2.77=38; 1.98=38
+  oncology_hema_condition:
+    description: History of Oncology/hematology condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528816.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7698'
+      dbgap_type: enum_integer
+      value_counts: No=6680; Yes=1018
+  osteoarthritis_derv:
+    description: Osteoarthritis
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528817.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7681'
+      dbgap_type: enum_integer
+      value_counts: No=6278; Yes=1403
+  osteoporosis_derv:
+    description: Osteoporosis
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528818.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: No=7136; Yes=555
+  pct_post_fef2575:
+    description: Percentage of observed postbronchodilator FEF2575 out of predicted
+      FEF2575 (100*(pfv53_Derv/pred_FEF2575_V1))
+    range: PctPostFef2575Enum
+    annotations:
+      variable_ids:
+      - phv00528819.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7676'
+      dbgap_type: decimal
+      value_counts: 21.12244515=2; 13.542174425=1; 71.076229959=1; 47.87394049=1;
+        85.003725431=1; 9.6219612603=1; 61.729869499=1; 78.486644404=1; 33.010391305=1;
+        47.299434589=1
+  pct_post_fef2575_blht:
+    description: Percentage of observed postbronchodilator FEF2575 out of predicted
+      FEF2575 (100*(pfv53_Derv/pred_FEF2575_V1)) using Visit 1 height
+    range: PctPostFef2575BlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528820.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7686'
+      dbgap_type: decimal
+      value_counts: 13.803976817=2; 13.542174425=1; 47.87394049=1; 61.729869499=1;
+        17.656613216=1; 33.010391305=1; 47.299434589=1; 151.63737873=1; 95.542956478=1;
+        12.003794219=1
+  pct_post_fev1:
+    description: Percentage of observed postbronchodilator FEV1 out of predicted FEV1
+      (100*(pfv45_Derv/pred_FEV1_V1))
+    range: PctPostFev1Enum
+    annotations:
+      variable_ids:
+      - phv00528821.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7676'
+      dbgap_type: decimal
+      value_counts: 94.707918667=2; 30.19196689=1; 50.648061261=1; 80.72387354=1;
+        86.173211226=1; 95.807022636=1; 103.27178483=1; 87.27830899=1; 93.70912342=1;
+        45.459545844=1
+  pct_post_fev1fvc:
+    description: Percentage of observed postbronchodilator FEV1FVC out of predicted
+      FEV1FVC (100*(100*post_FEV1FVC_DERV/pred_FEV1FVC_V1))
+    range: PctPostFev1fvcEnum
+    annotations:
+      variable_ids:
+      - phv00528822.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7686'
+      dbgap_type: decimal
+      value_counts: 79.721286124=1; 97.171522936=1; 98.347463717=1; 107.18978849=1;
+        62.612860428=1; 101.81264313=1; 53.344851163=1; 93.441355004=1; 103.14238274=1;
+        40.947165214=1
+  pct_post_fev1fvc_blht:
+    description: Percentage of observed postbronchodilator FEV1FVC out of predicted
+      FEV1FVC (100*(100*post_FEV1FVC_DERV/pred_FEV1FVC_V1)) using Visit 1 height
+    range: PctPostFev1fvcEnum
+    annotations:
+      variable_ids:
+      - phv00528823.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7686'
+      dbgap_type: decimal
+      value_counts: 79.721286124=1; 97.171522936=1; 98.347463717=1; 107.18978849=1;
+        62.612860428=1; 101.81264313=1; 53.344851163=1; 93.441355004=1; 103.14238274=1;
+        40.947165214=1
+  pct_post_fev1_blht:
+    description: Percentage of observed postbronchodilator FEV1 out of predicted FEV1
+      (100*(pfv45_Derv/pred_FEV1_V1)) using Visit 1 height
+    range: PctPostFev1BlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528824.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7686'
+      dbgap_type: decimal
+      value_counts: 94.707918667=2; 30.19196689=1; 50.648061261=1; 95.807022636=1;
+        43.274221554=1; 103.27178483=1; 109.95301758=1; 79.84924692=1; 45.459545844=1;
+        119.59398972=1
+  pct_post_fvc:
+    description: Percentage of observed postbronchodilator FVC out of predicted FVC
+      (100*(pfv40_Derv/pred_FVC_V1))
+    range: PctPostFvcEnum
+    annotations:
+      variable_ids:
+      - phv00528825.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7676'
+      dbgap_type: decimal
+      value_counts: 77.117062088=2; 109.36259323=1; 64.597492705=1; 75.317535819=1;
+        99.838828181=1; 128.38120943=1; 118.166958=1; 79.151614127=1; 64.906684673=1;
+        111.58444675=1
+  pct_post_fvc_blht:
+    description: Percentage of observed postbronchodilator FVC out of predicted FVC
+      (100*(pfv40_Derv/pred_FVC_V1)) using Visit 1 height
+    range: PctPostFvcBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528826.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7686'
+      dbgap_type: decimal
+      value_counts: 102.88884881=2; 109.36259323=1; 77.88411781=1; 99.838828181=1;
+        128.38120943=1; 61.150423953=1; 115.83842922=1; 111.58444675=1; 76.632236313=1;
+        79.20427326=1
+  pct_post_pefr:
+    description: Percentage of observed postbronchodilator PEFR out of predicted PEFR
+      (100*(pfv62_Derv/pred_PEFR_V1))
+    range: PctPostPefrEnum
+    annotations:
+      variable_ids:
+      - phv00528827.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7676'
+      dbgap_type: decimal
+      value_counts: 114.68276808=1; 104.70128268=1; 115.98262964=1; 118.70319429=1;
+        94.905593927=1; 112.59863505=1; 39.398191667=1; 62.053057583=1; 59.134910846=1;
+        88.651940552=1
+  pct_post_pefr_blht:
+    description: Percentage of observed postbronchodilator PEFR out of predicted PEFR
+      (100*(pfv62_Derv/pred_PEFR_V1)) using Visit 1 height
+    range: PctPostPefrBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528828.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7686'
+      dbgap_type: decimal
+      value_counts: 114.68276808=1; 74.882296266=1; 115.98262964=1; 118.70319429=1;
+        125.10151192=1; 49.5650812=1; 112.59863505=1; 123.82752176=1; 62.053057583=1;
+        128.9305225=1
+  pct_post_svc:
+    description: Percentage of observed postbronchodilator SVC out of predicted FVC
+      (100*(psv33_Derv/pred_FVC_V1))
+    range: PctPostSvcEnum
+    annotations:
+      variable_ids:
+      - phv00528829.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7687'
+      dbgap_type: decimal
+      value_counts: 106.50565308=1; 79.555024871=1; 99.069047066=1; 80.904948243=1;
+        115.4004701=1; 75.473460318=1; 70.159266151=1; 96.600086729=1; 96.829958705=1;
+        84.855724785=1
+  pct_post_svc_blht:
+    description: Percentage of observed postbronchodilator SVC out of predicted FVC
+      (100*(psv33_Derv/pred_FVC_V1)) using Visit 1 height
+    range: PctPostSvcBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528830.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7697'
+      dbgap_type: decimal
+      value_counts: 79.555024871=1; 80.904948243=1; 119.92095192=1; 115.4004701=1;
+        125.58647551=1; 75.473460318=1; 116.81656749=1; 70.159266151=1; 87.220949856=1;
+        96.600086729=1
+  pct_pre_fef2575:
+    description: Percentage of observed prebronchodilator FEF2575 out of predicted
+      FEF2575 (100*(sfv53_Derv/pred_FEF2575_V1))
+    range: PctPreFef2575Enum
+    annotations:
+      variable_ids:
+      - phv00528831.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7704'
+      dbgap_type: decimal
+      value_counts: 35.010936195=2; 57.287887352=2; 100.51920247=1; 27.157196497=1;
+        78.52134263=1; 96.083257486=1; 38.354987245=1; 159.3718936=1; 82.617644788=1;
+        21.229040945=1
+  pct_pre_fef2575_blht:
+    description: Percentage of observed prebronchodilator FEF2575 out of predicted
+      FEF2575 (100*(sfv53_Derv/pred_FEF2575_V1)) using Visit 1 height
+    range: PctPreFef2575BlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528832.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7715'
+      dbgap_type: decimal
+      value_counts: 35.560039299=2; 8.9307059414=2; 100.51920247=1; 27.157196497=1;
+        44.023514381=1; 78.52134263=1; 96.083257486=1; 38.354987245=1; 62.963746305=1;
+        10.495768883=1
+  pct_pre_fev1:
+    description: Percentage of observed prebronchodilator FEV1 out of predicted FEV1
+      (100*(sfv45_Derv/pred_FEV1_V1))
+    range: PctPreFev1Enum
+    annotations:
+      variable_ids:
+      - phv00528833.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7704'
+      dbgap_type: decimal
+      value_counts: 67.524164014=1; 56.352319218=1; 54.24601208=1; 90.350324608=1;
+        92.96789426=1; 18.75272958=1; 77.894039493=1; 92.035067154=1; 22.895208325=1;
+        70.056586057=1
+  pct_pre_fev1fvc:
+    description: Percentage of observed prebronchodilator FEV1FVC out of predicted
+      FEV1FVC (100*(100*pre_FEV1FVC_DERV/pred_FEV1FVC_V1))
+    range: PctPreFev1fvcEnum
+    annotations:
+      variable_ids:
+      - phv00528834.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7715'
+      dbgap_type: decimal
+      value_counts: 100.24320101=1; 90.84358898=1; 95.490251804=1; 99.994487128=1;
+        51.270504713=1; 96.612110722=1; 97.48011926=1; 110.08664547=1; 87.805964644=1;
+        87.407223508=1
+  pct_pre_fev1fvc_blht:
+    description: Percentage of observed prebronchodilator FEV1FVC out of predicted
+      FEV1FVC (100*(100*pre_FEV1FVC_DERV/pred_FEV1FVC_V1)) using Visit 1 height
+    range: PctPreFev1fvcEnum
+    annotations:
+      variable_ids:
+      - phv00528835.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7715'
+      dbgap_type: decimal
+      value_counts: 100.24320101=1; 90.84358898=1; 95.490251804=1; 99.994487128=1;
+        51.270504713=1; 96.612110722=1; 97.48011926=1; 110.08664547=1; 87.805964644=1;
+        87.407223508=1
+  pct_pre_fev1_blht:
+    description: Percentage of observed prebronchodilator FEV1 out of predicted FEV1
+      (100*(sfv45_Derv/pred_FEV1_V1)) using Visit 1 height
+    range: PctPreFev1BlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528836.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7715'
+      dbgap_type: decimal
+      value_counts: 56.352319218=1; 54.24601208=1; 80.605657405=1; 104.74152811=1;
+        92.96789426=1; 18.75272958=1; 77.894039493=1; 92.035067154=1; 22.895208325=1;
+        70.056586057=1
+  pct_pre_fvc:
+    description: Percentage of observed prebronchodilator FVC out of predicted FVC
+      (100*(sfv40_Derv/pred_FVC_V1))
+    range: PctPreFvcEnum
+    annotations:
+      variable_ids:
+      - phv00528837.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7704'
+      dbgap_type: decimal
+      value_counts: 87.285462175=1; 78.380523225=1; 59.301570602=1; 91.0608455=1;
+        94.00626915=1; 120.61251373=1; 70.840128039=1; 107.54900117=1; 94.697805787=1;
+        84.045703506=1
+  pct_pre_fvc_blht:
+    description: Percentage of observed prebronchodilator FVC out of predicted FVC
+      (100*(sfv40_Derv/pred_FVC_V1)) using Visit 1 height
+    range: PctPreFvcBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528838.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7715'
+      dbgap_type: decimal
+      value_counts: 48.012778044=1; 58.004037305=1; 78.380523225=1; 59.301570602=1;
+        91.0608455=1; 52.136050708=1; 120.61251373=1; 70.840128039=1; 107.54900117=1;
+        94.697805787=1
+  pct_pre_pefr:
+    description: Percentage of observed prebronchodilator PEFR out of predicted PEFR
+      (100*(sfv62_Derv/pred_PEFR_V1))
+    range: PctPrePefrEnum
+    annotations:
+      variable_ids:
+      - phv00528839.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7704'
+      dbgap_type: decimal
+      value_counts: 47.801966719=2; 108.19621906=2; 120.74009522=1; 90.242737439=1;
+        106.22191545=1; 37.8811612=1; 80.743589549=1; 98.163397494=1; 142.49607003=1;
+        51.627987176=1
+  pct_pre_pefr_blht:
+    description: Percentage of observed prebronchodilator PEFR out of predicted PEFR
+      (100*(sfv62_Derv/pred_PEFR_V1)) using Visit 1 height
+    range: PctPrePefrBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528840.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7715'
+      dbgap_type: decimal
+      value_counts: 107.05747708=2; 120.74009522=1; 67.826272797=1; 90.242737439=1;
+        106.22191545=1; 37.8811612=1; 80.743589549=1; 98.163397494=1; 51.627987176=1;
+        85.985330125=1
+  pct_pre_svc:
+    description: Percentage of observed prebronchodilator SVC out of predicted FVC
+      (100*(ssv33_Derv/pred_FVC_V1))
+    range: PctPreSvcEnum
+    annotations:
+      variable_ids:
+      - phv00528841.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7700'
+      dbgap_type: decimal
+      value_counts: 106.35565332=1; 71.223488212=1; 80.647488064=1; 73.060292597=1;
+        76.971701147=1; 89.49161674=1; 91.778972728=1; 98.259517917=1; 61.837596169=1;
+        101.4140818=1
+  pct_pre_svc_blht:
+    description: Percentage of observed prebronchodilator SVC out of predicted FVC
+      (100*(ssv33_Derv/pred_FVC_V1)) using Visit 1 height
+    range: PctPreSvcBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528842.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7711'
+      dbgap_type: decimal
+      value_counts: 106.35565332=1; 112.25446736=1; 71.223488212=1; 80.647488064=1;
+        94.283956714=1; 73.060292597=1; 76.971701147=1; 89.49161674=1; 91.778972728=1;
+        105.14497862=1
+  pirbuterol:
+    description: 'Inhaled bronchodilators used in last 3 months: Pirbuterol (Maxair)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528843.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7393'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3395; Yes=5
+  postfef2575_lt_lln:
+    description: Post-bronchodilator FEF25-75% less than LLN defined by Hankinson
+      1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528844.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: False=4810; True=2881
+  postfef2575_lt_lln_blht:
+    description: Post-bronchodilator FEF25-75% less than LLN defined by Hankinson
+      1999 using Visit 1 height
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528845.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: False=4810; True=2881
+  postfev1fvc_lt_70:
+    description: Post-bronchodilator FEV1/FVC ratio less than 0.7
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528846.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: enum_integer
+      value_counts: True=4869; False=2827
+  postfev1fvc_lt_lln:
+    description: Post-bronchodilator FEV1/FVC less than LLN defined by Hankinson 1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528847.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: True=4192; False=3499
+  postfev1fvc_lt_lln_blht:
+    description: Post-bronchodilator FEV1/FVC less than LLN defined by Hankinson 1999  using
+      Visit 1 height
+    range: Postfev1fvcLtLlnBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528848.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: integer
+      value_counts: 1=4192; 0=3499
+  postfev1_lt_lln:
+    description: Post-bronchodilator FEV1 less than LLN defined by Hankinson 1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528849.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: False=4288; True=3403
+  postfev1_lt_lln_blht:
+    description: Post-bronchodilator FEV1 less than LLN defined by Hankinson 1999  using
+      Visit 1 height
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528850.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: False=4288; True=3403
+  postfvc_lt_lln:
+    description: Post-bronchodilator FVC less than LLN defined by Hankinson 1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528851.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: False=6210; True=1481
+  postfvc_lt_lln_blht:
+    description: Post-bronchodilator FVC less than LLN defined by Hankinson 1999 using
+      Visit 1 height
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528852.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7691'
+      dbgap_type: enum_integer
+      value_counts: False=6210; True=1481
+  post_fef2575_derv:
+    description: FEF2575 derived at Visit
+    range: PostFef2575DervEnum
+    annotations:
+      variable_ids:
+      - phv00528853.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 0.4264=5; 0.7627=4; 0.3693=4; 0.2831=4; 0.5121=4; 0.3356=4; 0.2979=4;
+        0.4528=4; 0.4075=4; 0.2727=4
+  post_fev1fvc_derv:
+    description: Post_BD derived FEV1 FVC ratio using best FEV1 and FVC value at Visit
+    range: PostFev1fvcDervEnum
+    annotations:
+      variable_ids:
+      - phv00528854.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 0.5685791002=1; 0.624475105=1; 0.6707766039=1; 0.7479558873=1;
+        0.6247957617=1; 0.6828153241=1; 0.7613118737=1; 0.2785555028=1; 0.7053146805=1;
+        0.3231943976=1
+  post_fev1_annualized_rate:
+    description: Post FEV1 annual rate of change
+    range: PostFev1AnnualizedRateEnum
+    annotations:
+      variable_ids:
+      - phv00528855.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4691'
+      dbgap_type: decimal
+      value_counts: -0.1461=4; -0.109869556=2; -0.057963587=2; 0.0107426471=2; -0.227779533=2;
+        0.0458110169=2; 0.0635460459=2; 0.07305=2; 0.0580102941=2; -0.024284718=2
+  post_fev1_derv:
+    description: Fev1 derived at Visit (post-bronchodilator)
+    range: PostFev1DervEnum
+    annotations:
+      variable_ids:
+      - phv00528856.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 2.0906=4; 3.6226=4; 1.8558=4; 1.5219=4; 1.4822=3; 1.8042=3; 2.5743=3;
+        2.2298=3; 2.3511=3; 1.5813=3
+  post_fevdif_derv:
+    description: Fevdiff derived at Visit
+    range: PostFevdifDervEnum
+    annotations:
+      variable_ids:
+      - phv00528857.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '2960'
+      dbgap_type: integer
+      value_counts: 150=107; 120=95; 130=90; 140=89; 100=87; 180=85; 60=85; 110=83;
+        220=81; 170=80
+  post_fvc_derv:
+    description: Fvc derived at Visit (post-bronchodilator)
+    range: PostFvcDervEnum
+    annotations:
+      variable_ids:
+      - phv00528858.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 4.6752=4; 3.0423=4; 2.7584=4; 2.1719=4; 3.7283=4; 3.4997=4; 2.8592=3;
+        3.2437=3; 2.962=3; 1.9015=3
+  post_pefr_derv:
+    description: Pefr derived at Visit
+    range: PostPefrDervEnum
+    annotations:
+      variable_ids:
+      - phv00528859.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7696'
+      dbgap_type: decimal
+      value_counts: 9.781=4; 4.1394=3; 4.8561=3; 6.3087=3; 6.3476=3; 6.6255=3; 3.121=2;
+        7.8315=2; 9.6118=2; 3.2571=2
+  post_rvspca_derv:
+    description: RVSPCA derived at Visit
+    range: PostRvspcaDervEnum
+    annotations:
+      variable_ids:
+      - phv00528860.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '2960'
+      dbgap_type: decimal
+      value_counts: 0=52; 6=24; 5.3=22; 4.1=21; 6.3=21; 2.9=21; 5.8=20; 10.9=20; 7=20;
+        4.6=19
+  pred_fef2575:
+    description: Predicted FEF25%-75% (Computed based on gender, race/ethnicity, rage,
+      and height)
+    range: PredFef2575Enum
+    annotations:
+      variable_ids:
+      - phv00528861.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7742'
+      dbgap_type: decimal
+      value_counts: 2.70573=23; 2.6316598=22; 2.6816098=20; 2.75568=19; 2.00252758=19;
+        2.80563=19; 2.20035505=18; 2.27235625=17; 2.04856758=17; 2.76843705=17
+  pred_fef2575_blht:
+    description: Predicted FEF25%-75% (Computed based on gender, race/ethnicity, rage,
+      and height) using Visit 1 height
+    range: PredFef2575BlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528862.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 2.70573=24; 2.6316598=21; 2.75568=20; 2.6816098=20; 2.00252758=19;
+        2.80563=18; 2.1400095=17; 1.86200758=17; 2.09420758=16; 2.04856758=16
+  pred_fev1:
+    description: Predicted FEV1 (computed based on gender, race/ethnicity, age, and
+      height)
+    range: PredFev1Enum
+    annotations:
+      variable_ids:
+      - phv00528863.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7742'
+      dbgap_type: decimal
+      value_counts: 3.476234=23; 3.37529232=22; 3.41119832=20; 2.34513624=19; 3.51214=19;
+        3.547702=19; 2.94318242=18; 2.37493624=17; 3.59351122=17; 3.0413045=17
+  pred_fev1fvc:
+    description: Predicted FEV1FVC (computed based on gender, race/ethnicity, age,
+      and height)
+    range: PredFev1fvcEnum
+    annotations:
+      variable_ids:
+      - phv00528864.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 74.2238=205; 74.0172=180; 74.4304=176; 73.1908=169; 73.3974=167;
+        73.8106=155; 74.637=151; 72.9842=151; 73.604=149; 76.5715=145
+  pred_fev1fvc_blht:
+    description: Predicted FEV1FVC (computed based on gender, race/ethnicity, age,
+      and height) using Visit 1 height
+    range: PredFev1fvcEnum
+    annotations:
+      variable_ids:
+      - phv00528865.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 74.2238=205; 74.0172=180; 74.4304=176; 73.1908=169; 73.3974=167;
+        73.8106=155; 74.637=151; 72.9842=151; 73.604=149; 76.5715=145
+  pred_fev1_blht:
+    description: Predicted FEV1 (computed based on gender, race/ethnicity, age, and
+      height) using Visit 1 height
+    range: PredFev1BlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528866.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 3.476234=24; 3.37529232=21; 3.41119832=20; 3.51214=20; 2.34513624=19;
+        3.547702=18; 2.479762=17; 2.25340824=17; 2.37493624=16; 2.40434824=16
+  pred_fvc:
+    description: Predicted FVC (computed based on gender, race/ethnicity, age, and
+      height)
+    range: PredFvcEnum
+    annotations:
+      variable_ids:
+      - phv00528867.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7742'
+      dbgap_type: decimal
+      value_counts: 4.682047=23; 4.54857028=22; 4.58370728=20; 4.717184=19; 3.08542935=19;
+        4.751783=19; 4.03764818=18; 4.84938338=17; 3.11829935=17; 4.1673965=17
+  pred_fvc_blht:
+    description: Predicted FVC (computed based on gender, race/ethnicity, age, and
+      height) using Visit 1 height
+    range: PredFvcBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528868.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 4.682047=24; 4.54857028=21; 4.717184=20; 4.58370728=20; 3.08542935=19;
+        4.751783=18; 3.24759175=17; 2.98223535=17; 3.21548575=16; 4.07547518=16
+  pred_pefr:
+    description: Predicted PEF rate (Computed based on gender, race/ethnicity, rage,
+      and height)
+    range: PredPefrEnum
+    annotations:
+      variable_ids:
+      - phv00528869.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7742'
+      dbgap_type: decimal
+      value_counts: 8.842039=23; 8.66331108=22; 8.75362408=20; 5.81902087=19; 8.932352=19;
+        9.020063=19; 7.73463298=18; 7.9083685=17; 9.02096018=17; 5.88891587=17
+  pred_pefr_blht:
+    description: Predicted PEF rate (Computed based on gender, race/ethnicity, rage,
+      and height) using Visit 1 height
+    range: PredPefrBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528870.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7754'
+      dbgap_type: decimal
+      value_counts: 8.842039=24; 8.66331108=21; 8.75362408=20; 8.932352=20; 5.81902087=19;
+        9.020063=18; 5.59696387=17; 6.07891575=17; 5.95674887=16; 5.88891587=16
+  prefef2575_lt_lln:
+    description: Pre-bronchodilator FEF25-75% less than LLN defined by Hankinson 1999
+    range: Postfev1fvcLtLlnBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528871.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: integer
+      value_counts: 0=4356; 1=3363
+  prefef2575_lt_lln_blht:
+    description: Pre-bronchodilator FEF25-75% less than LLN defined by Hankinson 1999  using
+      Visit 1 height
+    range: Postfev1fvcLtLlnBlhtEnum
+    annotations:
+      variable_ids:
+      - phv00528872.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: integer
+      value_counts: 0=4356; 1=3363
+  prefev1fvc_lt_lln:
+    description: Pre-bronchodilator FEV1/FVC less than LLN defined by Hankinson 1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528873.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: enum_integer
+      value_counts: True=4665; False=3054
+  prefev1fvc_lt_lln_blht:
+    description: Pre-bronchodilator FEV1/FVC less than LLN defined by Hankinson 1999
+      using Visit 1 height
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528874.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: enum_integer
+      value_counts: True=4665; False=3054
+  prefev1_lt_lln:
+    description: Pre-bronchodilator FEV1 less than LLN defined by Hankinson 1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528875.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: enum_integer
+      value_counts: True=4163; False=3556
+  prefev1_lt_lln_blht:
+    description: Pre-bronchodilator FEV1 less than LLN defined by Hankinson 1999 using
+      Visit 1 height
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528876.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: enum_integer
+      value_counts: True=4163; False=3556
+  prefvc_lt_lln:
+    description: Pre-bronchodilator FVC less than LLN defined by Hankinson 1999
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528877.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: enum_integer
+      value_counts: False=5407; True=2312
+  prefvc_lt_lln_blht:
+    description: Pre-bronchodilator FVC less than LLN defined by Hankinson 1999 using
+      Visit 1 height
+    range: Fev1BdresponsePellerginoEnum
+    annotations:
+      variable_ids:
+      - phv00528878.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7719'
+      dbgap_type: enum_integer
+      value_counts: False=5407; True=2312
+  pre_fef2575_derv:
+    description: PRE_FEF2575_DERV
+    range: PreFef2575DervEnum
+    annotations:
+      variable_ids:
+      - phv00528879.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7724'
+      dbgap_type: decimal
+      value_counts: 0.4676=5; 0.4278=5; 0.9111=5; 0.1659=4; 0.7698=4; 0.3547=4; 0.3314=4;
+        0.3518=4; 0.2495=4; 0.3064=4
+  pre_fev1fvc_derv:
+    description: PRE_FEV1FVC_DERV
+    range: PreFev1fvcDervEnum
+    annotations:
+      variable_ids:
+      - phv00528880.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7724'
+      dbgap_type: decimal
+      value_counts: 0.4263959391=2; 0.6147623862=2; 0.5=2; 0.6726130653=1; 0.711960911=1;
+        0.4571690334=1; 0.5759036145=1; 0.6885875394=1; 0.6880320777=1; 0.371354964=1
+  pre_fev1_annualized_rate:
+    description: PRE_FEV1_ANNUALIZED_RATE
+    range: PreFev1AnnualizedRateEnum
+    annotations:
+      variable_ids:
+      - phv00528881.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '4723'
+      dbgap_type: decimal
+      value_counts: 0.0182625=3; 0.036525=3; -0.050077262=2; -0.029633491=2; -0.032812294=2;
+        -0.180139005=2; -0.040583333=2; -0.02739375=2; 0.07305=2; 0.1565357143=2
+  pre_fev1_derv:
+    description: PRE_FEV1_DERV
+    range: PreFev1DervEnum
+    annotations:
+      variable_ids:
+      - phv00528882.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7724'
+      dbgap_type: decimal
+      value_counts: 2.638=4; 1.0597=4; 1.2853=4; 1.7825=4; 0.9937=4; 1.5125=4; 2.7273=3;
+        1.1574=3; 2.1151=3; 2.7568=3
+  pre_fvc_derv:
+    description: PRE_FVC_DERV
+    range: PreFvcDervEnum
+    annotations:
+      variable_ids:
+      - phv00528883.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7724'
+      dbgap_type: decimal
+      value_counts: 4.0246=4; 2.6061=4; 3.2975=4; 2.322=4; 2.1481=4; 2.7911=4; 4.0666=4;
+        2.3815=4; 2.6683=3; 2.466=3
+  pre_pefr_derv:
+    description: PRE_PEFR_DERV
+    range: PrePefrDervEnum
+    annotations:
+      variable_ids:
+      - phv00528884.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7724'
+      dbgap_type: decimal
+      value_counts: 5.624=3; 5.151=3; 3.8636=3; 6.5529=3; 7.4682=3; 2.9271=3; 8.0259=3;
+        5.2679=3; 4.94=3; 5.0678=3
+  psq_daysleepydysfunc:
+    description: Pittsburgh sleep quality day dysfunction due to sleepiness
+    range: PsqDaysleepydysfuncEnum
+    annotations:
+      variable_ids:
+      - phv00528885.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7611'
+      dbgap_type: integer
+      value_counts: 1=3899; 0=2840; 2=727; 3=145
+  psq_durationsleep:
+    description: Pittsburgh sleep quality duration of sleep
+    range: PsqDaysleepydysfuncEnum
+    annotations:
+      variable_ids:
+      - phv00528886.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7607'
+      dbgap_type: integer
+      value_counts: 0=4464; 1=1770; 2=856; 3=517
+  psq_needmedstosleep:
+    description: Pittsburgh sleep quality need meds to sleep
+    range: PsqDaysleepydysfuncEnum
+    annotations:
+      variable_ids:
+      - phv00528887.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7655'
+      dbgap_type: integer
+      value_counts: 0=5152; 3=1559; 1=487; 2=457
+  psq_overallsleepquality:
+    description: Pittsburgh sleep quality overall sleep quality
+    range: PsqDaysleepydysfuncEnum
+    annotations:
+      variable_ids:
+      - phv00528888.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7663'
+      dbgap_type: integer
+      value_counts: 1=3799; 0=2131; 2=1256; 3=477
+  psq_sleepdisturbance:
+    description: Pittsburgh sleep quality sleep disturbance
+    range: PsqDaysleepydysfuncEnum
+    annotations:
+      variable_ids:
+      - phv00528889.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7545'
+      dbgap_type: integer
+      value_counts: 1=3945; 2=2927; 3=468; 0=205
+  psq_sleepefficiency:
+    description: Pittsburgh sleep quality sleep efficiency
+    range: PsqSleepefficiencyEnum
+    annotations:
+      variable_ids:
+      - phv00528890.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7286'
+      dbgap_type: enum_integer
+      value_counts: indicating very good sleep efficiency=4488; indicating good sleep
+        efficiency=1408; indicating very poor sleep efficiency=711; indicating poor
+        efficiency=679
+  psq_sleeplatency:
+    description: Pittsburgh sleep quality sleep latency
+    range: PsqDaysleepydysfuncEnum
+    annotations:
+      variable_ids:
+      - phv00528891.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7605'
+      dbgap_type: integer
+      value_counts: 1=2692; 0=2607; 2=1413; 3=893
+  psq_totalscore:
+    description: Pittsburgh sleep quality total score
+    range: PsqTotalscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528892.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7057'
+      dbgap_type: integer
+      value_counts: 4=798; 5=747; 3=733; 2=726; 6=621; 7=560; 8=493; 1=474; 9=397;
+        10=320
+  psv33_derv:
+    description: PSV33_derv = Best Post-drug slow vital capacity
+    range: Psv33DervEnum
+    annotations:
+      variable_ids:
+      - phv00528893.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7707'
+      dbgap_type: decimal
+      value_counts: 2.6571=4; 2.4676=4; 2.65=4; 3.7739=3; 2.562=3; 2.73=3; 2.2302=3;
+        3.9325=3; 3.1629=3; 3.1444=3
+  psychiatric_condition:
+    description: History of Psychiatric condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528894.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7682'
+      dbgap_type: enum_integer
+      value_counts: No=5883; Yes=1799
+  pulmonary_vascular_cond:
+    description: History of Pulmonary/vascular condition
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528895.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7679'
+      dbgap_type: enum_integer
+      value_counts: No=6352; Yes=1327
+  qvar:
+    description: 'Inhaled steroids used in last 3 months: Qvar (beclomethasone) includes
+      Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528896.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7494'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5283; No=2035; Yes=176
+  saba:
+    description: Short acting bronchodilator used in the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528897.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7672'
+      dbgap_type: enum_integer
+      value_counts: No=5078; Yes=2594
+  saba_sama:
+    description: Combined short-acting bronchodilator and muscarinic antagonist in
+      the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528898.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: enum_integer
+      value_counts: No=7144; Yes=517
+  salmeterol:
+    description: 'Inhaled bronchodilators used in last 3 months: Salmeterol (Serevent
+      Diskus) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528899.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7400'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3342; Yes=65
+  sama:
+    description: Short-acting muscarinic antagonist in the last 3 months
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528900.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7655'
+      dbgap_type: enum_integer
+      value_counts: No=7438; Yes=217
+  sf12aggmcs:
+    description: SF-12 Short Form Health Survey Aggregate Mental Health Score
+    range: Sf12aggmcsEnum
+    annotations:
+      variable_ids:
+      - phv00528901.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7625'
+      dbgap_type: decimal
+      value_counts: 0.7162356443=158; 1.2390331337=94; 0.7060741163=82; 0.9137816384=67;
+        1.2491946616=49; 0.4099347481=39; 0.7331715242=38; 1.0123750125=38; 0.4200962761=35;
+        1.2099210066=35
+  sf12aggmcst:
+    description: SF-12 Short Form Health Survey Aggregate Mental Health T Score
+    range: Sf12aggmcstEnum
+    annotations:
+      variable_ids:
+      - phv00528902.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7625'
+      dbgap_type: decimal
+      value_counts: 57.162356443=158; 62.390331337=94; 57.060741163=82; 59.137816384=67;
+        62.491946616=49; 54.099347481=39; 57.331715242=38; 60.123750125=38; 62.099210066=35;
+        54.200962761=35
+  sf12aggpcs:
+    description: SF-12 Short Form Health Survey Aggregate Physical Health Score
+    range: Sf12aggpcsEnum
+    annotations:
+      variable_ids:
+      - phv00528903.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7625'
+      dbgap_type: decimal
+      value_counts: 0.6146887626=158; 0.6705189886=94; 0.7760959995=82; 0.250484004=67;
+        0.5091117517=49; 0.9106238955=39; 0.3456767012=38; 0.4801608666=38; 0.115956108=35;
+        0.7492166586=35
+  sf12aggpcst:
+    description: SF-12 Short Form Health Survey Aggregate Physical Health T Score
+    range: Sf12aggpcstEnum
+    annotations:
+      variable_ids:
+      - phv00528904.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7625'
+      dbgap_type: decimal
+      value_counts: 56.146887626=158; 56.705189886=94; 57.760959995=82; 52.50484004=67;
+        55.091117517=49; 59.106238955=39; 54.801608666=38; 53.456767012=38; 51.15956108=35;
+        57.492166586=35
+  sf12bp:
+    description: SF-12 Short Form Health Survey Bodily Pain Scale
+    range: Sf12bpEnum
+    annotations:
+      variable_ids:
+      - phv00528905.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7654'
+      dbgap_type: integer
+      value_counts: 100=3701; 75=1855; 50=1036; 25=748; 0=314
+  sf12bpt:
+    description: SF-12 Short Form Health Survey Bodily Pain Scale T Score
+    range: Sf12bptEnum
+    annotations:
+      variable_ids:
+      - phv00528906.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7654'
+      dbgap_type: decimal
+      value_counts: 57.443827382=3701; 47.252304201=1855; 37.060781021=1036; 26.869257841=748;
+        16.677734661=314
+  sf12bpz:
+    description: SF-12 Short Form Health Survey Bodily Pain Scale Z Transformation
+    range: Sf12bpzEnum
+    annotations:
+      variable_ids:
+      - phv00528907.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7654'
+      dbgap_type: decimal
+      value_counts: 0.7443827382=3701; -0.27476958=1855; -1.293921898=1036; -2.313074216=748;
+        -3.332226534=314
+  sf12gh:
+    description: SF-12 Short Form Health Survey  General Health Scale
+    range: Sf12ghEnum
+    annotations:
+      variable_ids:
+      - phv00528908.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7687'
+      dbgap_type: integer
+      value_counts: 60=2740; 85=2140; 25=1748; 100=666; 0=393
+  sf12ght:
+    description: SF-12 Short Form Health Survey  General Health T Score
+    range: Sf12ghtEnum
+    annotations:
+      variable_ids:
+      - phv00528909.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7687'
+      dbgap_type: decimal
+      value_counts: 44.740088683=2740; 55.520406927=2140; 29.647643142=1748; 61.988597873=666;
+        18.867324899=393
+  sf12ghz:
+    description: SF-12 Short Form Health Survey  General Health Z Transformation
+    range: Sf12ghzEnum
+    annotations:
+      variable_ids:
+      - phv00528910.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7687'
+      dbgap_type: decimal
+      value_counts: -0.525991132=2740; 0.5520406927=2140; -2.035235686=1748; 1.1988597873=666;
+        -3.11326751=393
+  sf12mh:
+    description: SF-12 Short Form Health Survey  Mental Health Scale
+    range: Sf12mhEnum
+    annotations:
+      variable_ids:
+      - phv00528911.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7640'
+      dbgap_type: decimal
+      value_counts: 87.5=2207; 75=1645; 62.5=952; 100=934; 50=776; 37.5=362; 25=192;
+        90=177; 80=123; 70=82
+  sf12mht:
+    description: SF-12 Short Form Health Survey  Mental Health Scale T Score
+    range: Sf12mhtEnum
+    annotations:
+      variable_ids:
+      - phv00528912.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7640'
+      dbgap_type: decimal
+      value_counts: 58.445262526=2207; 52.349476762=1645; 46.253690998=952; 64.54104829=934;
+        40.157905234=776; 34.062119471=362; 27.966333707=192; 59.664419679=177; 54.787791068=123;
+        49.911162457=82
+  sf12mhz:
+    description: SF-12 Short Form Health Survey  Mental Health Scale Z Transformation
+    range: Sf12mhzEnum
+    annotations:
+      variable_ids:
+      - phv00528913.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7640'
+      dbgap_type: decimal
+      value_counts: 0.8445262526=2207; 0.2349476762=1645; -0.3746309=952; 1.454104829=934;
+        -0.984209477=776; -1.593788053=362; -2.203366629=192; 0.9664419679=177; 0.4787791068=123;
+        -0.008883754=82
+  sf12pf:
+    description: SF-12 Short Form Health Survey  Physical Functioning Scale
+    range: Sf12bpEnum
+    annotations:
+      variable_ids:
+      - phv00528914.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7673'
+      dbgap_type: integer
+      value_counts: 50=1737; 75=1651; 100=1598; 25=1400; 0=1287
+  sf12pft:
+    description: SF-12 Short Form Health Survey  Physical Functioning Scale T Score
+    range: Sf12pftEnum
+    annotations:
+      variable_ids:
+      - phv00528915.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7673'
+      dbgap_type: decimal
+      value_counts: 39.286968819=1737; 47.876298535=1651; 56.465628251=1598; 30.697639102=1400;
+        22.108309386=1287
+  sf12pfz:
+    description: SF-12 Short Form Health Survey  Physical Functioning Scale Z Transformation
+    range: Sf12pfzEnum
+    annotations:
+      variable_ids:
+      - phv00528916.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7673'
+      dbgap_type: decimal
+      value_counts: -1.071303118=1737; -0.212370147=1651; 0.6465628251=1598; -1.93023609=1400;
+        -2.789169061=1287
+  sf12re:
+    description: SF-12 Short Form Health Survey  Role Emotional Scale
+    range: Sf12reEnum
+    annotations:
+      variable_ids:
+      - phv00528917.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7653'
+      dbgap_type: decimal
+      value_counts: 100=4046; 75=1077; 50=690; 87.5=595; 62.5=413; 25=232; 37.5=192;
+        0=104; 80=102; 60=51
+  sf12ret:
+    description: SF-12 Short Form Health Survey  Role Emotional Scale T Score
+    range: Sf12retEnum
+    annotations:
+      variable_ids:
+      - phv00528918.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7653'
+      dbgap_type: decimal
+      value_counts: 56.078831854=4046; 44.895866463=1077; 33.712901071=690; 50.487349159=595;
+        39.304383767=413; 22.52993568=232; 28.121418376=192; 11.346970289=104; 47.132459541=102;
+        38.186087228=51
+  sf12rez:
+    description: SF-12 Short Form Health Survey  Role Emotional Scale Z Transformation
+    range: Sf12rezEnum
+    annotations:
+      variable_ids:
+      - phv00528919.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7653'
+      dbgap_type: decimal
+      value_counts: 0.6078831854=4046; -0.510413354=1077; -1.628709893=690; 0.0487349159=595;
+        -1.069561623=413; -2.747006432=232; -2.187858162=192; -3.865302971=104; -0.286754046=102;
+        -1.181391277=51
+  sf12rp:
+    description: SF-12 Short Form Health Survey  Role Physical Scale
+    range: Sf12rpEnum
+    annotations:
+      variable_ids:
+      - phv00528920.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: decimal
+      value_counts: 100=2148; 50=1303; 75=1244; 87.5=587; 25=579; 62.5=542; 37.5=436;
+        0=286; 12.5=153; 80=100
+  sf12rpt:
+    description: SF-12 Short Form Health Survey  Role Physical Scale T Score
+    range: Sf12rptEnum
+    annotations:
+      variable_ids:
+      - phv00528921.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: decimal
+      value_counts: 57.175696861=2148; 38.74948683=1303; 47.962591845=1244; 52.569144353=587;
+        29.536381815=579; 43.356039338=542; 34.142934322=436; 20.323276799=286; 24.929829307=153;
+        49.805212849=100
+  sf12rpz:
+    description: SF-12 Short Form Health Survey  Role Physical Scale Z Transformation
+    range: Sf12rpzEnum
+    annotations:
+      variable_ids:
+      - phv00528922.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: decimal
+      value_counts: 0.7175696861=2148; -1.125051317=1303; -0.203740815=1244; 0.2569144353=587;
+        -2.046361819=579; -0.664396066=542; -1.585706568=436; -2.96767232=286; -2.507017069=153;
+        -0.019478715=100
+  sf12sf:
+    description: SF-12 Short Form Health Survey  Social Functioning Scale
+    range: Sf12sfEnum
+    annotations:
+      variable_ids:
+      - phv00528923.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7652'
+      dbgap_type: integer
+      value_counts: 100=4497; 75=1324; 50=1004; 25=398; 0=194; 80=118; 60=78; 20=33;
+        40=6
+  sf12sft:
+    description: SF-12 Short Form Health Survey  Social Functioning Scale T Score
+    range: Sf12sftEnum
+    annotations:
+      variable_ids:
+      - phv00528924.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7652'
+      dbgap_type: decimal
+      value_counts: 56.567749493=4497; 46.469901344=1324; 36.372053195=1004; 26.274205047=398;
+        16.176356898=194; 48.489470974=118; 40.411192455=78; 24.254635417=33; 32.332913936=6
+  sf12sfz:
+    description: SF-12 Short Form Health Survey  Social Functioning Scale Z Transformation
+    range: Sf12sfzEnum
+    annotations:
+      variable_ids:
+      - phv00528925.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7652'
+      dbgap_type: decimal
+      value_counts: 0.6567749493=4497; -0.353009866=1324; -1.36279468=1004; -2.372579495=398;
+        -3.38236431=194; -0.151052903=118; -0.958880755=78; -2.574536458=33; -1.766708606=6
+  sf12vt:
+    description: SF-12 Short Form Health Survey  Vitality Scale
+    range: Sf12sfEnum
+    annotations:
+      variable_ids:
+      - phv00528926.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: integer
+      value_counts: 75=2425; 50=2251; 25=1339; 0=599; 100=524; 80=167; 40=132; 60=116;
+        20=108
+  sf12vtt:
+    description: SF-12 Short Form Health Survey  Vitality Scale T Score
+    range: Sf12vttEnum
+    annotations:
+      variable_ids:
+      - phv00528927.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: decimal
+      value_counts: 57.812452201=2425; 47.749579372=2251; 37.686706542=1339; 27.623833713=599;
+        67.875325031=524; 59.825026767=167; 43.72443024=132; 51.774728504=116; 35.674131977=108
+  sf12vtz:
+    description: SF-12 Short Form Health Survey  Vitality Scale Z Transformation
+    range: Sf12vtzEnum
+    annotations:
+      variable_ids:
+      - phv00528928.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7661'
+      dbgap_type: decimal
+      value_counts: 0.7812452201=2425; -0.225042063=2251; -1.231329346=1339; -2.237616629=599;
+        1.7875325031=524; 0.9825026767=167; -0.627556976=132; 0.1774728504=116; -1.432586802=108
+  sgr_activityscore:
+    description: St Georges Respiratory Questionnaire activity score
+    range: SgrActivityscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528929.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7588'
+      dbgap_type: decimal
+      value_counts: 7.01=1133; 13.657370027=500; 58.63997253=422; 94.01=328; 19.977239801=278;
+        65.844978126=269; 20.393253637=242; 46.044489775=215; 52.390913623=182; 86.840399837=179
+  sgr_c_activityscore:
+    description: St Georges Respiratory Questionnaire activity score using St Georges
+      Respiratory Questionnaire
+    range: SgrCActivityscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528930.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7588'
+      dbgap_type: decimal
+      value_counts: 0=1133; 7.640655204=500; 59.344796012=422; 100=328; 14.904873334=278;
+        67.626411639=269; 15.383050158=242; 44.867229627=215; 52.161969682=182; 91.759080273=179
+  sgr_c_impactscore:
+    description: St Georges Respiratory Questionnaire impact score using St Georges
+      Respiratory Questionnaire
+    range: SgrCImpactscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528931.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7561'
+      dbgap_type: decimal
+      value_counts: 0=1767; 2.0934172314=345; 4.6345595353=205; 2.541142304=97; 8.55517909=86;
+        3.9206195547=62; 4.646660213=59; 9.7168441433=46; 6.7400774443=44; 9.2812197483=40
+  sgr_c_symptomscore:
+    description: St Georges Respiratory Questionnaire symptom score using St Georges
+      Respiratory Questionnaire
+    range: SgrCSymptomscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528932.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7227'
+      dbgap_type: decimal
+      value_counts: 0=755; 10.296714942=152; 11.562871876=115; 6.7997174143=82; 97.050512187=77;
+        4.9629106323=67; 27.799364182=52; 19.463087248=47; 5.3338043094=44; 5.573185244=43
+  sgr_c_totalscore:
+    description: St Georges Respiratory Questionnaire total score using St Georges
+      Respiratory Questionnaire
+    range: SgrCTotalscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528933.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7108'
+      dbgap_type: decimal
+      value_counts: 0=403; 2.3454823698=59; 1.8207939036=57; 1.8567470302=46; 2.3917959171=37;
+        0.8776039227=32; 0.8949329596=21; 4.722196196=20; 4.1662762735=19; 1.9738280396=14
+  sgr_impactscore:
+    description: St Georges Respiratory Questionnaire impact score
+    range: SgrImpactscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528934.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7561'
+      dbgap_type: decimal
+      value_counts: 2.18=1767; 4.0222071636=345; 6.2584123911=205; 4.4162052275=97;
+        9.7085575992=86; 5.6301452081=62; 6.2690609874=59; 10.730822846=46; 8.111268151=44;
+        10.347473379=40
+  sgr_symptomscore:
+    description: St Georges Respiratory Questionnaire symptom score
+    range: SgrSymptomscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528935.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7227'
+      dbgap_type: decimal
+      value_counts: 0.94=755; 11.133747792=152; 12.387243157=115; 7.6717202402=82;
+        97.020007065=77; 5.853281526=67; 28.46137054=52; 20.208456376=47; 6.2204662663=44;
+        6.4574533915=43
+  sgr_totalscore:
+    description: St Georges Respiratory Questionnaire total score
+    range: SgrTotalscoreEnum
+    annotations:
+      variable_ids:
+      - phv00528936.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7108'
+      dbgap_type: decimal
+      value_counts: 3.1=403; 5.2109341329=59; 4.7387145133=57; 4.7710723271=46; 5.2526163254=37;
+        3.8898435304=32; 3.9054396637=21; 7.3499765764=20; 6.8496486461=19; 4.8764452356=14
+  six_minute_walk_distance:
+    description: Six Minute Walk Distance
+    range: SixMinuteWalkDistanceEnum
+    annotations:
+      variable_ids:
+      - phv00528937.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7349'
+      dbgap_type: decimal
+      value_counts: 420=97; 360=88; 426.72=86; 390=81; 365.76=76; 300=68; 450=65;
+        487.68=64; 480=64; 371.856=59
+  smoking_pack_years:
+    description: Smoking pack-Years
+    range: SmokingPackYearsEnum
+    annotations:
+      variable_ids:
+      - phv00528938.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7712'
+      dbgap_type: decimal
+      value_counts: 0=611; 40=469; 30=463; 60=291; 45=280; 50=266; 25=188; 35=179;
+        80=164; 37.5=91
+  smw_dsat:
+    description: Oxygen desaturation with the six minute walk
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528939.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7312'
+      dbgap_type: enum_integer
+      value_counts: No=5297; Yes=2015
+  smw_hypox:
+    description: Hypoxemia with six minute walk
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528940.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7374'
+      dbgap_type: enum_integer
+      value_counts: No=7251; Yes=123
+  ssv33_derv:
+    description: FVC derived pre-bronchodilator
+    range: Ssv33DervEnum
+    annotations:
+      variable_ids:
+      - phv00528941.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7721'
+      dbgap_type: decimal
+      value_counts: 3.8406=4; 3.35=4; 4.832=3; 2.6791=3; 3.5985=3; 3.1948=3; 2.7531=3;
+        4.6592=3; 2.4266=3; 4.6919=3
+  stroke_derv:
+    description: Stroke
+    range: ApneaDiagnosedEnum
+    annotations:
+      variable_ids:
+      - phv00528942.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7698'
+      dbgap_type: enum_integer
+      value_counts: No=7528; Yes=170
+  sxsmkr2_fvc_core2:
+    description: Non-smokers and smokers w/ or w/o symptoms using PFT RC vars
+    range: Sxsmkr2FvcCore2Enum
+    annotations:
+      variable_ids:
+      - phv00528943.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '5927'
+      dbgap_type: enum_integer
+      value_counts: Smokers, FEV1/FVC<0.7, PCTFEV>=50%, and CAT=2008; Smokers FEV1/FVC<0.7
+        PCTFEV>=50% and CAT=1156; Smokers FEV1/FVC>=0.7 FVC>LLN and CAT=1024; Stratum
+        1=808
+  sxsmkr2_fvc_core3:
+    description: Non-smokers and smokers w/ or w/o symptoms using GIC PFT vars
+    range: Sxsmkr2FvcCore3Enum
+    annotations:
+      variable_ids:
+      - phv00528944.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '5803'
+      dbgap_type: enum_integer
+      value_counts: Smokers, GOLD=1 or 2, and CAT=1974; Smokers GOLD=1 or 2 and CAT=1066;
+        Smokers FEV1/FVC>=0.7 FVC>LLN and CAT=1024; Stratum 1=808
+  terbutaline:
+    description: 'Inhaled bronchodilators used in last 3 months: terbutaline (Brethaire,
+      Brethine, Bricanyl) includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528945.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7397'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3993; No=3398; Yes=6
+  tiotropium:
+    description: 'Inhaled bronchodilators used in last 3 months: tiotropium (Spiriva)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528946.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7535'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=3992; Yes=1975; No=1568
+  titriopiumbromideolodatero:
+    description: 'Inhaled bronchodilator used in the last 3 months: titriopium bromide/olodaterol
+      (Stiolto) includes Other inhaled steroids or bronchodilators'
+    range: string
+    annotations:
+      variable_ids:
+      - phv00528947.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '0'
+      dbgap_type: string
+  totalvol_uln:
+    description: Upper limit of normal for total lung volume based on race, age, gender,
+      height, and BMI
+    range: TotalvolUlnEnum
+    annotations:
+      variable_ids:
+      - phv00528948.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7736'
+      dbgap_type: decimal
+      value_counts: 17.918=33; 18.314=32; 17.775=32; 18.336=31; 17.907=31; 18.017=31;
+        18.138=30; 16.323=30; 17.786=29; 18.083=29
+  triamcinolone:
+    description: 'Inhaled steroids used in last 3 months: triamcinolone (Azmacort)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528949.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7499'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5284; No=2199; Yes=16
+  umeclidinium:
+    description: 'Inhaled bronchodilator used in the last 3 months: umeclidinium (Incurse)
+      includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528950.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '1'
+      dbgap_type: string
+      value_counts: Yes=1
+  umeclidiniumvilanterol:
+    description: 'Inhaled bronchodilator used in the last 3 months: umeclidinium/vilanterol
+      (Anoro) includes Other inhaled steroids or bronchodilators'
+    range: EligibleEnum
+    annotations:
+      variable_ids:
+      - phv00528951.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7'
+      dbgap_type: string
+      value_counts: Yes=7
+  vanceril:
+    description: 'Inhaled steroids used in last 3 months: Vanceril (beclomethasone)
+      includes Other inhaled steroids or bronchodilators'
+    range: AlbuterolEnum
+    annotations:
+      variable_ids:
+      - phv00528952.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7494'
+      dbgap_type: enum_integer
+      value_counts: Not Applicable=5284; No=2209; Yes=1
+  vsascore:
+    description: Veteran specific activity score
+    range: VsascoreEnum
+    annotations:
+      variable_ids:
+      - phv00528953.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7551'
+      dbgap_type: integer
+      value_counts: 7=1253; 5=1022; 3=1000; 4=976; 6=883; 2=642; 10=425; 1=404; 8=271;
+        12=194
+  wt_kg:
+    description: Body weight
+    range: WtKgEnum
+    annotations:
+      variable_ids:
+      - phv00528954.v1.p1
+      source_files:
+      - phs001119.v1.pht013308.v1.p1.SPIROMICS_Subject_Phenotypes.var_report.xml
+      study_id: phs001119
+      count: '7753'
+      dbgap_type: decimal
+      value_counts: 75=62; 80=61; 78=60; 70=57; 68.2=50; 81=50; 84=49; 76=48; 89=46;
+        83=46
+  body_site:
+    description: Body site where sample was collected
+    range: BodySiteEnum
+    annotations:
+      variable_ids:
+      - phv00528956.v1.p1
+      source_files:
+      - phs002399.v1.pht013309.v1.p1.SPIROMICS_Genetic_Genomics_Sample_Attributes.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: string
+      value_counts: Blood=2611
+  analyte_type:
+    description: Analyte Type
+    range: AnalyteTypeEnum
+    annotations:
+      variable_ids:
+      - phv00528957.v1.p1
+      source_files:
+      - phs002399.v1.pht013309.v1.p1.SPIROMICS_Genetic_Genomics_Sample_Attributes.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: string
+      value_counts: DNA=2611
+  is_tumor:
+    description: Tumor status
+    range: IsTumorEnum
+    annotations:
+      variable_ids:
+      - phv00528958.v1.p1
+      source_files:
+      - phs002399.v1.pht013309.v1.p1.SPIROMICS_Genetic_Genomics_Sample_Attributes.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: enum_integer
+      value_counts: Is not a tumor=2611
+  collection_age:
+    description: Age sample was collected
+    range: CollectionAgeEnum
+    annotations:
+      variable_ids:
+      - phv00528959.v1.p1
+      source_files:
+      - phs002399.v1.pht013309.v1.p1.SPIROMICS_Genetic_Genomics_Sample_Attributes.var_report.xml
+      study_id: phs001119
+      count: '2611'
+      dbgap_type: integer
+      value_counts: 65=139; 67=128; 71=116; 66=112; 64=110; 68=108; 70=103; 72=102;
+        73=93; 63=87
+enums:
+  ConsentEnum:
+    permissible_values:
+      General Research Use (GRU):
+      General Research Use (NPU) (GRU-NPU):
+      Disease-Specific (Chronic Obstructive Pulmonary Disease) (DS-COPD):
+      Disease-Specific (Chronic Obstructive Pulmonary Disease, NPU) (DS-COPD-NPU):
+      General Research Use (COL, NPU) (GRU-COL-NPU):
+      Disease-Specific (Chronic Obstructive Pulmonary Disease, COL, NPU) (DS-COPD-COL-NPU):
+      General Research Use (COL) (GRU-COL):
+      Disease-Specific (Chronic Obstructive Pulmonary Disease, COL) (DS-COPD-COL):
+  SexEnum:
+    permissible_values:
+      Male:
+      Female:
+  StudyEnum:
+    permissible_values:
+      phs002399.v1.p1:
+  RaceEnum:
+    permissible_values:
+      White:
+      Black:
+      Mixed:
+      Asian:
+      Missing:
+      American Indian:
+      Pacific Isander:
+  EthnicityEnum:
+    permissible_values:
+      Non-hispanic:
+      Hispanic:
+  VisitEnum:
+    permissible_values:
+      VISIT_2:
+      VISIT_1:
+      VISIT_4:
+      VISIT_3:
+  YearDateVisitEnum:
+    permissible_values:
+      '2014':
+      '2013':
+      '2015':
+      '2012':
+      '2011':
+      '2016':
+      '2010':
+  StratumEnrolledEnum:
+    permissible_values:
+      Mild/Moderate GOLD Stage COPD Severity (GOLD_Stage_COPD_Severity is 1 or 2):
+      FEV1/FVC greater than or equal to 0.70 (GOLD_Stage_COPD_Severity is 0):
+      Severe/Very Severe GOLD Stage COPD Severity (GOLD_Stage_COPD_Severity=3 or 4):
+      Non-Smokers (GOLD_Stage_COPD_Severity is .N):
+  EligibleEnum:
+    permissible_values:
+      'Yes':
+  ConsentDataSpirBEnum:
+    permissible_values:
+      SPIROMICS and non-SPIROMICS investigators:
+      SPIROMICS investigators only:
+  ConsentDataCopdBEnum:
+    permissible_values:
+      COPD and non-COPD research:
+      COPD research only:
+  ConsentGeneticSpirDEnum:
+    permissible_values:
+      Include non-Spiromics:
+      No consent at all:
+      Spiromics only:
+  ConsentDataCommercBEnum:
+    permissible_values:
+      Non commercial and commercial:
+      Non commercial only:
+      No consent at all:
+  AgeDervEnum:
+    permissible_values:
+      '67':
+      '68':
+      '66':
+      '71':
+      '65':
+      '70':
+      '69':
+      '72':
+      '73':
+      '74':
+  AlbuterolEnum:
+    permissible_values:
+      Not Applicable:
+      'Yes':
+      'No':
+  ApneaDiagnosedEnum:
+    permissible_values:
+      'No':
+      'Yes':
+  AveragePacksPerDayEnum:
+    permissible_values:
+      '0':
+      '1':
+      '1.5':
+      '2':
+      '0.5':
+      '0.75':
+      '0.25':
+      '3':
+      '0.15':
+      '0.6':
+  AvgdiaEnum:
+    permissible_values:
+      '80':
+      '79':
+      '70':
+      '78':
+      '77':
+      '72':
+      '81':
+      '76':
+      '75':
+      '69':
+  AvghrEnum:
+    permissible_values:
+      '66.5':
+      '72':
+      '70':
+      '73':
+      '75':
+      '64.5':
+      '68':
+      '66':
+      '65':
+      '61':
+  AvgsysEnum:
+    permissible_values:
+      '120':
+      '119':
+      '124':
+      '118':
+      '126':
+      '121':
+      '130':
+      '122':
+      '117':
+      '131':
+  BitolterolEnum:
+    permissible_values:
+      Not Applicable:
+      'No':
+  BmiEnum:
+    permissible_values:
+      '26.080246914':
+      '23.937671723':
+      '25.964542172':
+      '18.365472911':
+      '31.25':
+      '22.78726319':
+      '22.582709172':
+      '24.801587302':
+      '25.390625':
+      '23.875114784':
+  BodeIndexEnum:
+    permissible_values:
+      '0':
+      '1':
+      '2':
+      '3':
+      '4':
+      '5':
+      '6':
+      '7':
+      '8':
+      '9':
+  BronchDiagnosedEnum:
+    permissible_values:
+      'No':
+      'Yes':
+      Unknown:
+  BsqApneariskEnum:
+    permissible_values:
+      2 or more BSQ categories total 2 or more points:
+      1 or no BSQ categories total 2 or more points:
+  CopdscoreEnum:
+    permissible_values:
+      '7':
+      '9':
+      '6':
+      '5':
+      '11':
+      '8':
+      '10':
+      '3':
+      '15':
+      '12':
+  CopdFoundationRankingEnum:
+    permissible_values:
+      SG1:
+      SG0:
+      SG2:
+      SGU:
+      SG3:
+  FacitEmotionalwellbeingEnum:
+    permissible_values:
+      '20':
+      '24':
+      '19':
+      '18':
+      '21':
+      '22':
+      '23':
+      '17':
+      '16':
+      '15':
+  FacitFatiguescoreEnum:
+    permissible_values:
+      '52':
+      '50':
+      '49':
+      '48':
+      '44':
+      '51':
+      '46':
+      '47':
+      '45':
+      '41':
+  FacitFtotalscoreEnum:
+    permissible_values:
+      '134':
+      '140':
+      '135':
+      '120':
+      '130':
+      '139':
+      '147':
+      '126':
+      '127':
+      '141':
+  FacitFtrialoutcomeindexEnum:
+    permissible_values:
+      '108':
+      '104':
+      '99':
+      '100':
+      '96':
+      '101':
+      '98':
+      '92':
+      '95':
+      '93':
+  FacitFunctionalwellbeingEnum:
+    permissible_values:
+      '28':
+      '21':
+      '24':
+      '19':
+      '20':
+      '18':
+      '26':
+      '22':
+      '23':
+      '25':
+  FacitGtotalEnum:
+    permissible_values:
+      '84':
+      '89':
+      '92':
+      '86':
+      '90':
+      '91':
+      '95':
+      '82':
+      '87':
+      '80':
+  FacitPhysicalwellbeingEnum:
+    permissible_values:
+      '28':
+      '27':
+      '26':
+      '25':
+      '24':
+      '23':
+      '22':
+      '21':
+      '20':
+      '19':
+  FacitSocialwellbeingEnum:
+    permissible_values:
+      '28':
+      '21':
+      '24':
+      '22':
+      '20':
+      '26':
+      '23':
+      '19':
+      '18':
+      '27':
+  Fev1BdresponseHankinsonEnum:
+    permissible_values:
+      '0':
+      '4.9223138293':
+      '16.855380148':
+      '8.9120865177':
+      '3.0887473046':
+      '32.23151993':
+      '6.0560839799':
+      '-0.444495408':
+      '3.7347571396':
+      '0.9208363635':
+  Fev1BdresponsePellerginoEnum:
+    permissible_values:
+      'False':
+      'True':
+  Fev1ObsPredPctEnum:
+    permissible_values:
+      '86.09181264':
+      '20.206040208':
+      '96.401945098':
+      '99.237060026':
+      '66.976825108':
+      '53.284533798':
+      '94.666201358':
+      '52.267630064':
+      '24.337843592':
+      '105.99962057':
+  Fev1ObsPredPctBlhtEnum:
+    permissible_values:
+      '86.09181264':
+      '20.206040208':
+      '83.360334901':
+      '94.666201358':
+      '91.777548382':
+      '24.337843592':
+      '105.99962057':
+      '95.518177928':
+      '91.037361369':
+      '59.88671859':
+  FvcBdresponseHankinsonEnum:
+    permissible_values:
+      '-2.646884185':
+      '18.776539764':
+      '8.0695076428':
+      '9.6881297149':
+      '10.138190428':
+      '9.0532655382':
+      '1.9109329911':
+      '4.8986406486':
+      '26.243955575':
+      '6.7137628894':
+  FvcBdresponsePctEnum:
+    permissible_values:
+      '11.111111111':
+      '2.9891304348':
+      '10.460251046':
+      '10.254118833':
+      '31.155962087':
+      '10.037526513':
+      '14.56344536':
+      '26.251010132':
+      '-1.533565924':
+      '-0.690583187':
+  FvcBdresponseVolEnum:
+    permissible_values:
+      '73.8':
+      '-60.3':
+      '106.6':
+      '-39.9':
+      '78.1':
+      '236.2':
+      '40.3':
+      '81.6':
+      '43.7':
+      '150.5':
+  GoldCatEnum:
+    permissible_values:
+      Low risk and more symptoms:
+      High risk and more symptoms:
+      Low risk and fewer symptoms:
+      High risk and fewer symptoms:
+  GoldStageCopdSeverityEnum:
+    permissible_values:
+      No airflow limitation:
+      Moderate airflow limitation:
+      Mild airflow limitation:
+      Severe airflow limitation:
+      N:
+      Very severe airflow limitation:
+  HtCmEnum:
+    permissible_values:
+      '165':
+      '163':
+      '175':
+      '168':
+      '170':
+      '173':
+      '178':
+      '160':
+      '180':
+      '167':
+  LlnFef2575Enum:
+    permissible_values:
+      '1.069206':
+      '1.03130096':
+      '1.08125096':
+      '1.119156':
+      '0.75909838':
+      '1.169106':
+      '0.8658795':
+      '0.61857838':
+      '0.80513838':
+      '0.8202395':
+  LlnFev1Enum:
+    permissible_values:
+      '2.66915':
+      '2.58604388':
+      '2.62194988':
+      '2.705056':
+      '1.75716427':
+      '2.740618':
+      '1.66543627':
+      '1.87727275':
+      '2.23527703':
+      '1.81637627':
+  LlnFev1FvcEnum:
+    permissible_values:
+      '64.5458':
+      '64.3392':
+      '64.7524':
+      '63.5128':
+      '63.7194':
+      '64.1326':
+      '64.959':
+      '63.3062':
+      '63.926':
+      '66.7775':
+  LlnFvcEnum:
+    permissible_values:
+      '3.727219':
+      '3.6148428':
+      '3.762356':
+      '3.6499798':
+      '2.39011862':
+      '3.796955':
+      '2.28692462':
+      '2.5351135':
+      '3.19346755':
+      '2.42298862':
+  LlnPefrEnum:
+    permissible_values:
+      '6.468091':
+      '6.3418244':
+      '6.4321374':
+      '6.558404':
+      '4.09867812':
+      '6.646115':
+      '4.316097':
+      '3.87662112':
+      '4.23640612':
+      '4.248264':
+  McqTotEnum:
+    permissible_values:
+      '5':
+      '6':
+      '9':
+      '8':
+      '7':
+      '10':
+      '11':
+      '12':
+      '13':
+      '14':
+  MenopauseEnum:
+    permissible_values:
+      Participant is male:
+      Participant is female and has reached menopause:
+      Participant is female and has not reached menopause:
+      Participant is female and does not know if they have reached menopause:
+  Mrc01Enum:
+    permissible_values:
+      I get short of breath when hurryin on the level or walking up a slight hill:
+      I only get breathless with strenuous exercise:
+      ? I walk slower than people of the same age on the level because of breathlessness
+        or have to stop for breath when walking at my own pace on the level
+      :
+      I stop for breath after walking about 100 yards or after a few minutes on the level:
+      I am too breathless to leave the house:
+  ObesityDervEnum:
+    permissible_values:
+      BMI less than 30:
+      BMI greater than or equal to 30:
+  ObsFev1Enum:
+    permissible_values:
+      '2.14':
+      '2.2':
+      '1.03':
+      '1.8':
+      '2.09':
+      '1.82':
+      '1.59':
+      '1.87':
+      '2.77':
+      '1.98':
+  PctPostFef2575Enum:
+    permissible_values:
+      '21.12244515':
+      '13.542174425':
+      '71.076229959':
+      '47.87394049':
+      '85.003725431':
+      '9.6219612603':
+      '61.729869499':
+      '78.486644404':
+      '33.010391305':
+      '47.299434589':
+  PctPostFef2575BlhtEnum:
+    permissible_values:
+      '13.803976817':
+      '13.542174425':
+      '47.87394049':
+      '61.729869499':
+      '17.656613216':
+      '33.010391305':
+      '47.299434589':
+      '151.63737873':
+      '95.542956478':
+      '12.003794219':
+  PctPostFev1Enum:
+    permissible_values:
+      '94.707918667':
+      '30.19196689':
+      '50.648061261':
+      '80.72387354':
+      '86.173211226':
+      '95.807022636':
+      '103.27178483':
+      '87.27830899':
+      '93.70912342':
+      '45.459545844':
+  PctPostFev1fvcEnum:
+    permissible_values:
+      '79.721286124':
+      '97.171522936':
+      '98.347463717':
+      '107.18978849':
+      '62.612860428':
+      '101.81264313':
+      '53.344851163':
+      '93.441355004':
+      '103.14238274':
+      '40.947165214':
+  PctPostFev1BlhtEnum:
+    permissible_values:
+      '94.707918667':
+      '30.19196689':
+      '50.648061261':
+      '95.807022636':
+      '43.274221554':
+      '103.27178483':
+      '109.95301758':
+      '79.84924692':
+      '45.459545844':
+      '119.59398972':
+  PctPostFvcEnum:
+    permissible_values:
+      '77.117062088':
+      '109.36259323':
+      '64.597492705':
+      '75.317535819':
+      '99.838828181':
+      '128.38120943':
+      '118.166958':
+      '79.151614127':
+      '64.906684673':
+      '111.58444675':
+  PctPostFvcBlhtEnum:
+    permissible_values:
+      '102.88884881':
+      '109.36259323':
+      '77.88411781':
+      '99.838828181':
+      '128.38120943':
+      '61.150423953':
+      '115.83842922':
+      '111.58444675':
+      '76.632236313':
+      '79.20427326':
+  PctPostPefrEnum:
+    permissible_values:
+      '114.68276808':
+      '104.70128268':
+      '115.98262964':
+      '118.70319429':
+      '94.905593927':
+      '112.59863505':
+      '39.398191667':
+      '62.053057583':
+      '59.134910846':
+      '88.651940552':
+  PctPostPefrBlhtEnum:
+    permissible_values:
+      '114.68276808':
+      '74.882296266':
+      '115.98262964':
+      '118.70319429':
+      '125.10151192':
+      '49.5650812':
+      '112.59863505':
+      '123.82752176':
+      '62.053057583':
+      '128.9305225':
+  PctPostSvcEnum:
+    permissible_values:
+      '106.50565308':
+      '79.555024871':
+      '99.069047066':
+      '80.904948243':
+      '115.4004701':
+      '75.473460318':
+      '70.159266151':
+      '96.600086729':
+      '96.829958705':
+      '84.855724785':
+  PctPostSvcBlhtEnum:
+    permissible_values:
+      '79.555024871':
+      '80.904948243':
+      '119.92095192':
+      '115.4004701':
+      '125.58647551':
+      '75.473460318':
+      '116.81656749':
+      '70.159266151':
+      '87.220949856':
+      '96.600086729':
+  PctPreFef2575Enum:
+    permissible_values:
+      '35.010936195':
+      '57.287887352':
+      '100.51920247':
+      '27.157196497':
+      '78.52134263':
+      '96.083257486':
+      '38.354987245':
+      '159.3718936':
+      '82.617644788':
+      '21.229040945':
+  PctPreFef2575BlhtEnum:
+    permissible_values:
+      '35.560039299':
+      '8.9307059414':
+      '100.51920247':
+      '27.157196497':
+      '44.023514381':
+      '78.52134263':
+      '96.083257486':
+      '38.354987245':
+      '62.963746305':
+      '10.495768883':
+  PctPreFev1Enum:
+    permissible_values:
+      '67.524164014':
+      '56.352319218':
+      '54.24601208':
+      '90.350324608':
+      '92.96789426':
+      '18.75272958':
+      '77.894039493':
+      '92.035067154':
+      '22.895208325':
+      '70.056586057':
+  PctPreFev1fvcEnum:
+    permissible_values:
+      '100.24320101':
+      '90.84358898':
+      '95.490251804':
+      '99.994487128':
+      '51.270504713':
+      '96.612110722':
+      '97.48011926':
+      '110.08664547':
+      '87.805964644':
+      '87.407223508':
+  PctPreFev1BlhtEnum:
+    permissible_values:
+      '56.352319218':
+      '54.24601208':
+      '80.605657405':
+      '104.74152811':
+      '92.96789426':
+      '18.75272958':
+      '77.894039493':
+      '92.035067154':
+      '22.895208325':
+      '70.056586057':
+  PctPreFvcEnum:
+    permissible_values:
+      '87.285462175':
+      '78.380523225':
+      '59.301570602':
+      '91.0608455':
+      '94.00626915':
+      '120.61251373':
+      '70.840128039':
+      '107.54900117':
+      '94.697805787':
+      '84.045703506':
+  PctPreFvcBlhtEnum:
+    permissible_values:
+      '48.012778044':
+      '58.004037305':
+      '78.380523225':
+      '59.301570602':
+      '91.0608455':
+      '52.136050708':
+      '120.61251373':
+      '70.840128039':
+      '107.54900117':
+      '94.697805787':
+  PctPrePefrEnum:
+    permissible_values:
+      '47.801966719':
+      '108.19621906':
+      '120.74009522':
+      '90.242737439':
+      '106.22191545':
+      '37.8811612':
+      '80.743589549':
+      '98.163397494':
+      '142.49607003':
+      '51.627987176':
+  PctPrePefrBlhtEnum:
+    permissible_values:
+      '107.05747708':
+      '120.74009522':
+      '67.826272797':
+      '90.242737439':
+      '106.22191545':
+      '37.8811612':
+      '80.743589549':
+      '98.163397494':
+      '51.627987176':
+      '85.985330125':
+  PctPreSvcEnum:
+    permissible_values:
+      '106.35565332':
+      '71.223488212':
+      '80.647488064':
+      '73.060292597':
+      '76.971701147':
+      '89.49161674':
+      '91.778972728':
+      '98.259517917':
+      '61.837596169':
+      '101.4140818':
+  PctPreSvcBlhtEnum:
+    permissible_values:
+      '106.35565332':
+      '112.25446736':
+      '71.223488212':
+      '80.647488064':
+      '94.283956714':
+      '73.060292597':
+      '76.971701147':
+      '89.49161674':
+      '91.778972728':
+      '105.14497862':
+  Postfev1fvcLtLlnBlhtEnum:
+    permissible_values:
+      '1':
+      '0':
+  PostFef2575DervEnum:
+    permissible_values:
+      '0.4264':
+      '0.7627':
+      '0.3693':
+      '0.2831':
+      '0.5121':
+      '0.3356':
+      '0.2979':
+      '0.4528':
+      '0.4075':
+      '0.2727':
+  PostFev1fvcDervEnum:
+    permissible_values:
+      '0.5685791002':
+      '0.624475105':
+      '0.6707766039':
+      '0.7479558873':
+      '0.6247957617':
+      '0.6828153241':
+      '0.7613118737':
+      '0.2785555028':
+      '0.7053146805':
+      '0.3231943976':
+  PostFev1AnnualizedRateEnum:
+    permissible_values:
+      '-0.1461':
+      '-0.109869556':
+      '-0.057963587':
+      '0.0107426471':
+      '-0.227779533':
+      '0.0458110169':
+      '0.0635460459':
+      '0.07305':
+      '0.0580102941':
+      '-0.024284718':
+  PostFev1DervEnum:
+    permissible_values:
+      '2.0906':
+      '3.6226':
+      '1.8558':
+      '1.5219':
+      '1.4822':
+      '1.8042':
+      '2.5743':
+      '2.2298':
+      '2.3511':
+      '1.5813':
+  PostFevdifDervEnum:
+    permissible_values:
+      '150':
+      '120':
+      '130':
+      '140':
+      '100':
+      '180':
+      '60':
+      '110':
+      '220':
+      '170':
+  PostFvcDervEnum:
+    permissible_values:
+      '4.6752':
+      '3.0423':
+      '2.7584':
+      '2.1719':
+      '3.7283':
+      '3.4997':
+      '2.8592':
+      '3.2437':
+      '2.962':
+      '1.9015':
+  PostPefrDervEnum:
+    permissible_values:
+      '9.781':
+      '4.1394':
+      '4.8561':
+      '6.3087':
+      '6.3476':
+      '6.6255':
+      '3.121':
+      '7.8315':
+      '9.6118':
+      '3.2571':
+  PostRvspcaDervEnum:
+    permissible_values:
+      '0':
+      '6':
+      '5.3':
+      '4.1':
+      '6.3':
+      '2.9':
+      '5.8':
+      '10.9':
+      '7':
+      '4.6':
+  PredFef2575Enum:
+    permissible_values:
+      '2.70573':
+      '2.6316598':
+      '2.6816098':
+      '2.75568':
+      '2.00252758':
+      '2.80563':
+      '2.20035505':
+      '2.27235625':
+      '2.04856758':
+      '2.76843705':
+  PredFef2575BlhtEnum:
+    permissible_values:
+      '2.70573':
+      '2.6316598':
+      '2.75568':
+      '2.6816098':
+      '2.00252758':
+      '2.80563':
+      '2.1400095':
+      '1.86200758':
+      '2.09420758':
+      '2.04856758':
+  PredFev1Enum:
+    permissible_values:
+      '3.476234':
+      '3.37529232':
+      '3.41119832':
+      '2.34513624':
+      '3.51214':
+      '3.547702':
+      '2.94318242':
+      '2.37493624':
+      '3.59351122':
+      '3.0413045':
+  PredFev1fvcEnum:
+    permissible_values:
+      '74.2238':
+      '74.0172':
+      '74.4304':
+      '73.1908':
+      '73.3974':
+      '73.8106':
+      '74.637':
+      '72.9842':
+      '73.604':
+      '76.5715':
+  PredFev1BlhtEnum:
+    permissible_values:
+      '3.476234':
+      '3.37529232':
+      '3.41119832':
+      '3.51214':
+      '2.34513624':
+      '3.547702':
+      '2.479762':
+      '2.25340824':
+      '2.37493624':
+      '2.40434824':
+  PredFvcEnum:
+    permissible_values:
+      '4.682047':
+      '4.54857028':
+      '4.58370728':
+      '4.717184':
+      '3.08542935':
+      '4.751783':
+      '4.03764818':
+      '4.84938338':
+      '3.11829935':
+      '4.1673965':
+  PredFvcBlhtEnum:
+    permissible_values:
+      '4.682047':
+      '4.54857028':
+      '4.717184':
+      '4.58370728':
+      '3.08542935':
+      '4.751783':
+      '3.24759175':
+      '2.98223535':
+      '3.21548575':
+      '4.07547518':
+  PredPefrEnum:
+    permissible_values:
+      '8.842039':
+      '8.66331108':
+      '8.75362408':
+      '5.81902087':
+      '8.932352':
+      '9.020063':
+      '7.73463298':
+      '7.9083685':
+      '9.02096018':
+      '5.88891587':
+  PredPefrBlhtEnum:
+    permissible_values:
+      '8.842039':
+      '8.66331108':
+      '8.75362408':
+      '8.932352':
+      '5.81902087':
+      '9.020063':
+      '5.59696387':
+      '6.07891575':
+      '5.95674887':
+      '5.88891587':
+  PreFef2575DervEnum:
+    permissible_values:
+      '0.4676':
+      '0.4278':
+      '0.9111':
+      '0.1659':
+      '0.7698':
+      '0.3547':
+      '0.3314':
+      '0.3518':
+      '0.2495':
+      '0.3064':
+  PreFev1fvcDervEnum:
+    permissible_values:
+      '0.4263959391':
+      '0.6147623862':
+      '0.5':
+      '0.6726130653':
+      '0.711960911':
+      '0.4571690334':
+      '0.5759036145':
+      '0.6885875394':
+      '0.6880320777':
+      '0.371354964':
+  PreFev1AnnualizedRateEnum:
+    permissible_values:
+      '0.0182625':
+      '0.036525':
+      '-0.050077262':
+      '-0.029633491':
+      '-0.032812294':
+      '-0.180139005':
+      '-0.040583333':
+      '-0.02739375':
+      '0.07305':
+      '0.1565357143':
+  PreFev1DervEnum:
+    permissible_values:
+      '2.638':
+      '1.0597':
+      '1.2853':
+      '1.7825':
+      '0.9937':
+      '1.5125':
+      '2.7273':
+      '1.1574':
+      '2.1151':
+      '2.7568':
+  PreFvcDervEnum:
+    permissible_values:
+      '4.0246':
+      '2.6061':
+      '3.2975':
+      '2.322':
+      '2.1481':
+      '2.7911':
+      '4.0666':
+      '2.3815':
+      '2.6683':
+      '2.466':
+  PrePefrDervEnum:
+    permissible_values:
+      '5.624':
+      '5.151':
+      '3.8636':
+      '6.5529':
+      '7.4682':
+      '2.9271':
+      '8.0259':
+      '5.2679':
+      '4.94':
+      '5.0678':
+  PsqDaysleepydysfuncEnum:
+    permissible_values:
+      '1':
+      '0':
+      '2':
+      '3':
+  PsqSleepefficiencyEnum:
+    permissible_values:
+      indicating very good sleep efficiency:
+      indicating good sleep efficiency:
+      indicating very poor sleep efficiency:
+      indicating poor efficiency:
+  PsqTotalscoreEnum:
+    permissible_values:
+      '4':
+      '5':
+      '3':
+      '2':
+      '6':
+      '7':
+      '8':
+      '1':
+      '9':
+      '10':
+  Psv33DervEnum:
+    permissible_values:
+      '2.6571':
+      '2.4676':
+      '2.65':
+      '3.7739':
+      '2.562':
+      '2.73':
+      '2.2302':
+      '3.9325':
+      '3.1629':
+      '3.1444':
+  Sf12aggmcsEnum:
+    permissible_values:
+      '0.7162356443':
+      '1.2390331337':
+      '0.7060741163':
+      '0.9137816384':
+      '1.2491946616':
+      '0.4099347481':
+      '0.7331715242':
+      '1.0123750125':
+      '0.4200962761':
+      '1.2099210066':
+  Sf12aggmcstEnum:
+    permissible_values:
+      '57.162356443':
+      '62.390331337':
+      '57.060741163':
+      '59.137816384':
+      '62.491946616':
+      '54.099347481':
+      '57.331715242':
+      '60.123750125':
+      '62.099210066':
+      '54.200962761':
+  Sf12aggpcsEnum:
+    permissible_values:
+      '0.6146887626':
+      '0.6705189886':
+      '0.7760959995':
+      '0.250484004':
+      '0.5091117517':
+      '0.9106238955':
+      '0.3456767012':
+      '0.4801608666':
+      '0.115956108':
+      '0.7492166586':
+  Sf12aggpcstEnum:
+    permissible_values:
+      '56.146887626':
+      '56.705189886':
+      '57.760959995':
+      '52.50484004':
+      '55.091117517':
+      '59.106238955':
+      '54.801608666':
+      '53.456767012':
+      '51.15956108':
+      '57.492166586':
+  Sf12bpEnum:
+    permissible_values:
+      '100':
+      '75':
+      '50':
+      '25':
+      '0':
+  Sf12bptEnum:
+    permissible_values:
+      '57.443827382':
+      '47.252304201':
+      '37.060781021':
+      '26.869257841':
+      '16.677734661':
+  Sf12bpzEnum:
+    permissible_values:
+      '0.7443827382':
+      '-0.27476958':
+      '-1.293921898':
+      '-2.313074216':
+      '-3.332226534':
+  Sf12ghEnum:
+    permissible_values:
+      '60':
+      '85':
+      '25':
+      '100':
+      '0':
+  Sf12ghtEnum:
+    permissible_values:
+      '44.740088683':
+      '55.520406927':
+      '29.647643142':
+      '61.988597873':
+      '18.867324899':
+  Sf12ghzEnum:
+    permissible_values:
+      '-0.525991132':
+      '0.5520406927':
+      '-2.035235686':
+      '1.1988597873':
+      '-3.11326751':
+  Sf12mhEnum:
+    permissible_values:
+      '87.5':
+      '75':
+      '62.5':
+      '100':
+      '50':
+      '37.5':
+      '25':
+      '90':
+      '80':
+      '70':
+  Sf12mhtEnum:
+    permissible_values:
+      '58.445262526':
+      '52.349476762':
+      '46.253690998':
+      '64.54104829':
+      '40.157905234':
+      '34.062119471':
+      '27.966333707':
+      '59.664419679':
+      '54.787791068':
+      '49.911162457':
+  Sf12mhzEnum:
+    permissible_values:
+      '0.8445262526':
+      '0.2349476762':
+      '-0.3746309':
+      '1.454104829':
+      '-0.984209477':
+      '-1.593788053':
+      '-2.203366629':
+      '0.9664419679':
+      '0.4787791068':
+      '-0.008883754':
+  Sf12pftEnum:
+    permissible_values:
+      '39.286968819':
+      '47.876298535':
+      '56.465628251':
+      '30.697639102':
+      '22.108309386':
+  Sf12pfzEnum:
+    permissible_values:
+      '-1.071303118':
+      '-0.212370147':
+      '0.6465628251':
+      '-1.93023609':
+      '-2.789169061':
+  Sf12reEnum:
+    permissible_values:
+      '100':
+      '75':
+      '50':
+      '87.5':
+      '62.5':
+      '25':
+      '37.5':
+      '0':
+      '80':
+      '60':
+  Sf12retEnum:
+    permissible_values:
+      '56.078831854':
+      '44.895866463':
+      '33.712901071':
+      '50.487349159':
+      '39.304383767':
+      '22.52993568':
+      '28.121418376':
+      '11.346970289':
+      '47.132459541':
+      '38.186087228':
+  Sf12rezEnum:
+    permissible_values:
+      '0.6078831854':
+      '-0.510413354':
+      '-1.628709893':
+      '0.0487349159':
+      '-1.069561623':
+      '-2.747006432':
+      '-2.187858162':
+      '-3.865302971':
+      '-0.286754046':
+      '-1.181391277':
+  Sf12rpEnum:
+    permissible_values:
+      '100':
+      '50':
+      '75':
+      '87.5':
+      '25':
+      '62.5':
+      '37.5':
+      '0':
+      '12.5':
+      '80':
+  Sf12rptEnum:
+    permissible_values:
+      '57.175696861':
+      '38.74948683':
+      '47.962591845':
+      '52.569144353':
+      '29.536381815':
+      '43.356039338':
+      '34.142934322':
+      '20.323276799':
+      '24.929829307':
+      '49.805212849':
+  Sf12rpzEnum:
+    permissible_values:
+      '0.7175696861':
+      '-1.125051317':
+      '-0.203740815':
+      '0.2569144353':
+      '-2.046361819':
+      '-0.664396066':
+      '-1.585706568':
+      '-2.96767232':
+      '-2.507017069':
+      '-0.019478715':
+  Sf12sfEnum:
+    permissible_values:
+      '100':
+      '75':
+      '50':
+      '25':
+      '0':
+      '80':
+      '60':
+      '20':
+      '40':
+  Sf12sftEnum:
+    permissible_values:
+      '56.567749493':
+      '46.469901344':
+      '36.372053195':
+      '26.274205047':
+      '16.176356898':
+      '48.489470974':
+      '40.411192455':
+      '24.254635417':
+      '32.332913936':
+  Sf12sfzEnum:
+    permissible_values:
+      '0.6567749493':
+      '-0.353009866':
+      '-1.36279468':
+      '-2.372579495':
+      '-3.38236431':
+      '-0.151052903':
+      '-0.958880755':
+      '-2.574536458':
+      '-1.766708606':
+  Sf12vttEnum:
+    permissible_values:
+      '57.812452201':
+      '47.749579372':
+      '37.686706542':
+      '27.623833713':
+      '67.875325031':
+      '59.825026767':
+      '43.72443024':
+      '51.774728504':
+      '35.674131977':
+  Sf12vtzEnum:
+    permissible_values:
+      '0.7812452201':
+      '-0.225042063':
+      '-1.231329346':
+      '-2.237616629':
+      '1.7875325031':
+      '0.9825026767':
+      '-0.627556976':
+      '0.1774728504':
+      '-1.432586802':
+  SgrActivityscoreEnum:
+    permissible_values:
+      '7.01':
+      '13.657370027':
+      '58.63997253':
+      '94.01':
+      '19.977239801':
+      '65.844978126':
+      '20.393253637':
+      '46.044489775':
+      '52.390913623':
+      '86.840399837':
+  SgrCActivityscoreEnum:
+    permissible_values:
+      '0':
+      '7.640655204':
+      '59.344796012':
+      '100':
+      '14.904873334':
+      '67.626411639':
+      '15.383050158':
+      '44.867229627':
+      '52.161969682':
+      '91.759080273':
+  SgrCImpactscoreEnum:
+    permissible_values:
+      '0':
+      '2.0934172314':
+      '4.6345595353':
+      '2.541142304':
+      '8.55517909':
+      '3.9206195547':
+      '4.646660213':
+      '9.7168441433':
+      '6.7400774443':
+      '9.2812197483':
+  SgrCSymptomscoreEnum:
+    permissible_values:
+      '0':
+      '10.296714942':
+      '11.562871876':
+      '6.7997174143':
+      '97.050512187':
+      '4.9629106323':
+      '27.799364182':
+      '19.463087248':
+      '5.3338043094':
+      '5.573185244':
+  SgrCTotalscoreEnum:
+    permissible_values:
+      '0':
+      '2.3454823698':
+      '1.8207939036':
+      '1.8567470302':
+      '2.3917959171':
+      '0.8776039227':
+      '0.8949329596':
+      '4.722196196':
+      '4.1662762735':
+      '1.9738280396':
+  SgrImpactscoreEnum:
+    permissible_values:
+      '2.18':
+      '4.0222071636':
+      '6.2584123911':
+      '4.4162052275':
+      '9.7085575992':
+      '5.6301452081':
+      '6.2690609874':
+      '10.730822846':
+      '8.111268151':
+      '10.347473379':
+  SgrSymptomscoreEnum:
+    permissible_values:
+      '0.94':
+      '11.133747792':
+      '12.387243157':
+      '7.6717202402':
+      '97.020007065':
+      '5.853281526':
+      '28.46137054':
+      '20.208456376':
+      '6.2204662663':
+      '6.4574533915':
+  SgrTotalscoreEnum:
+    permissible_values:
+      '3.1':
+      '5.2109341329':
+      '4.7387145133':
+      '4.7710723271':
+      '5.2526163254':
+      '3.8898435304':
+      '3.9054396637':
+      '7.3499765764':
+      '6.8496486461':
+      '4.8764452356':
+  SixMinuteWalkDistanceEnum:
+    permissible_values:
+      '420':
+      '360':
+      '426.72':
+      '390':
+      '365.76':
+      '300':
+      '450':
+      '487.68':
+      '480':
+      '371.856':
+  SmokingPackYearsEnum:
+    permissible_values:
+      '0':
+      '40':
+      '30':
+      '60':
+      '45':
+      '50':
+      '25':
+      '35':
+      '80':
+      '37.5':
+  Ssv33DervEnum:
+    permissible_values:
+      '3.8406':
+      '3.35':
+      '4.832':
+      '2.6791':
+      '3.5985':
+      '3.1948':
+      '2.7531':
+      '4.6592':
+      '2.4266':
+      '4.6919':
+  Sxsmkr2FvcCore2Enum:
+    permissible_values:
+      Smokers, FEV1/FVC<0.7, PCTFEV>=50%, and CAT:
+      Smokers FEV1/FVC<0.7 PCTFEV>=50% and CAT:
+      Smokers FEV1/FVC>=0.7 FVC>LLN and CAT:
+      Stratum 1:
+  Sxsmkr2FvcCore3Enum:
+    permissible_values:
+      Smokers, GOLD=1 or 2, and CAT:
+      Smokers GOLD=1 or 2 and CAT:
+      Smokers FEV1/FVC>=0.7 FVC>LLN and CAT:
+      Stratum 1:
+  TotalvolUlnEnum:
+    permissible_values:
+      '17.918':
+      '18.314':
+      '17.775':
+      '18.336':
+      '17.907':
+      '18.017':
+      '18.138':
+      '16.323':
+      '17.786':
+      '18.083':
+  VsascoreEnum:
+    permissible_values:
+      '7':
+      '5':
+      '3':
+      '4':
+      '6':
+      '2':
+      '10':
+      '1':
+      '8':
+      '12':
+  WtKgEnum:
+    permissible_values:
+      '75':
+      '80':
+      '78':
+      '70':
+      '68.2':
+      '81':
+      '84':
+      '76':
+      '89':
+      '83':
+  BodySiteEnum:
+    permissible_values:
+      Blood:
+  AnalyteTypeEnum:
+    permissible_values:
+      DNA:
+  IsTumorEnum:
+    permissible_values:
+      Is not a tumor:
+  CollectionAgeEnum:
+    permissible_values:
+      '65':
+      '67':
+      '71':
+      '66':
+      '64':
+      '68':
+      '70':
+      '72':
+      '73':
+      '63':

@@ -4,41 +4,6 @@ A small static docs site (built with [mkdocs](https://www.mkdocs.org/)) for
 browsing LinkML schemas generated from dbGaP `var_report.xml` variable
 summaries — one page per study, all navigable from a single sidebar.
 
-## Pushing to GitHub
-
-This folder is already a git repo (`git init` + first commit done, on
-branch `main`). To put it on GitHub:
-
-```bash
-# 1. Create an empty repo on GitHub (no README/license/gitignore — this
-#    folder already has all of that), e.g. via the CLI:
-gh repo create dbgap-linkml-docs --public --source=. --remote=origin
-
-#    ...or create it in the GitHub web UI, then:
-git remote add origin https://github.com/<your-username>/dbgap-linkml-docs.git
-
-# 2. Push
-git push -u origin main
-```
-
-## Enabling GitHub Pages (auto-deploy on every push)
-
-A workflow at `.github/workflows/deploy-docs.yml` is already included — it
-rebuilds the site from `schemas/` and deploys it via GitHub Pages every
-time you push to `main` (or you can trigger it manually from the Actions
-tab). To turn it on:
-
-1. On GitHub: **Settings → Pages → Source → GitHub Actions** (not "Deploy
-   from a branch" — the workflow uses the newer Pages Actions deployment).
-2. Push to `main` (or re-run the workflow from the **Actions** tab).
-3. Your site will be live at `https://<your-username>.github.io/dbgap-linkml-docs/`
-   — the exact URL also shows up in the workflow run's summary and under
-   Settings → Pages once the first deploy finishes.
-
-No further setup needed — every future push that touches `schemas/`,
-`docs/`, `build_docs.py`, or `mkdocs.yml` triggers a fresh build + deploy
-automatically.
-
 ## Layout
 
 ```
