@@ -1,0 +1,64 @@
+id: https://biodatacatalyst.nhlbi.nih.gov/schemas/bdc_phs000285_variables
+name: BdcPhs000285VariablesSchema
+description: BioData Catalyst schema derived from BDC_phs000285_variables.xlsx.
+version: 1.0.0
+default_range: string
+license: https://creativecommons.org/publicdomain/zero/1.0/
+imports:
+- linkml:types
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  xsd: http://www.w3.org/2001/XMLSchema#
+  bdc: https://biodatacatalyst.nhlbi.nih.gov/cde/
+default_prefix: bdc
+annotations:
+  study_id: phs000285
+classes:
+  SubjectA:
+    description: 'BDC dataset: SubjectA (source: phs000285.v1.pht0001.v1.p1.SubjectA.var_report.xml).'
+    slots:
+    - subjid
+    - age
+  SubjectB:
+    description: 'BDC dataset: SubjectB (source: phs000285.v1.pht0002.v1.p1.SubjectB.var_report.xml).'
+    slots:
+    - subjid
+    - age__subjectb
+slots:
+  subjid:
+    description: Subject ID
+    range: string
+    annotations:
+      variable_ids:
+      - phv00001.v1.p3
+      - phv00003.v1.p3
+      source_files:
+      - phs000285.v1.pht0001.v1.p1.SubjectA.var_report.xml
+      - phs000285.v1.pht0002.v1.p1.SubjectB.var_report.xml
+      study_id: phs000285
+      count: '500'
+      dbgap_type: string
+  age:
+    description: Age in years at enrollment
+    range: integer
+    annotations:
+      variable_ids:
+      - phv00002.v1.p3
+      source_files:
+      - phs000285.v1.pht0001.v1.p1.SubjectA.var_report.xml
+      study_id: phs000285
+      count: '500'
+      dbgap_type: integer
+  age__subjectb:
+    description: Age in years at follow-up visit 2
+    range: integer
+    annotations:
+      variable_ids:
+      - phv00004.v1.p3
+      source_files:
+      - phs000285.v1.pht0002.v1.p1.SubjectB.var_report.xml
+      study_id: phs000285
+      count: '300'
+      dbgap_type: integer
+enums: {}

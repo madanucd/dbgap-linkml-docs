@@ -1,0 +1,12 @@
+site_name: dbGaP LinkML Schema Browser
+theme:
+  name: readthedocs
+nav:
+- Home: index.md
+- Studies:
+  - phs000179: studies/phs000179.md
+  - phs000280: studies/phs000280.md
+  - phs000285: studies/phs000285.md
+markdown_extensions:
+- tables
+- attr_list

@@ -1,0 +1,11 @@
+# mkdocs build output (rebuilt by CI, no need to commit)
+site/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS cruft
+.DS_Store
