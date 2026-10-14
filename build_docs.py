@@ -8,6 +8,10 @@ plus one page per study showing its classes (datasets), slots (variables),
 and enums (permissible values) — all navigable from a single sidebar via
 mkdocs.
 
+Each dataset table shows, per variable: Variable, Variable ID(s), Type,
+Range, Unit, Total N, Description, Values. Unit comes from the slot's
+'unit' annotation and is blank when dbGaP recorded none.
+
 Usage:
     python build_docs.py                         # schemas/ -> docs/, refresh mkdocs.yml
     python build_docs.py --schemas-folder path    # custom schema source folder
@@ -180,13 +184,12 @@ def _render_study_page(schema: dict, filename: str) -> str:
             lines.append('')
         lines.append(f'{len(class_slots)} variable(s):')
         lines.append('')
-        lines.append('| Variable | Variable ID(s) | Type | Range | Total N | Description | Values |')
-        lines.append('|---|---|---|---|---|---|---|')
+        lines.append('| Variable | Variable ID(s) | Type | Range | Unit | Total N | Description | Values |')
+        lines.append('|---|---|---|---|---|---|---|---|')
         for slot_key in class_slots:
             slot_def = slots.get(slot_key) or {}
             ann = slot_def.get('annotations') or {}
             range_val = slot_def.get('range', '')
-            range_cell = range_val
             if range_val in enums:
                 range_cell = f'[`{range_val}`](#{_slugify(range_val)}-enum)'
             else:
@@ -201,6 +204,7 @@ def _render_study_page(schema: dict, filename: str) -> str:
                 variable_ids_cell,
                 _md_escape_cell(ann.get('dbgap_type', '')),
                 range_cell,
+                _md_escape_cell(ann.get('unit', '')),
                 _md_escape_cell(ann.get('count', '')),
                 _md_escape_cell(slot_def.get('description', '')),
                 values_cell,
