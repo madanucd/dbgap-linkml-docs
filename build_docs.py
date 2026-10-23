@@ -12,6 +12,11 @@ Each dataset table shows, per variable: Variable, Variable ID(s), Type,
 Range, Unit, Total N, Description, Values. Unit comes from the slot's
 'unit' annotation and is blank when dbGaP recorded none.
 
+Multi-valued annotations (variable_ids, source_files) are written by
+bdc2linkml.py as a single ', '-joined string, since LinkML annotation values
+must be scalars. Older schemas that stored them as YAML lists are still
+handled.
+
 Usage:
     python build_docs.py                         # schemas/ -> docs/, refresh mkdocs.yml
     python build_docs.py --schemas-folder path    # custom schema source folder
@@ -32,6 +37,10 @@ import re
 import yaml
 
 
+# Separator bdc2linkml.py uses when joining multi-valued annotations.
+ANNOTATION_LIST_SEP = ', '
+
+
 # --------------------------------------------------------------------------- #
 # Helpers
 # --------------------------------------------------------------------------- #
@@ -39,6 +48,23 @@ import yaml
 def _slugify(text: str) -> str:
     text = re.sub(r'[^a-zA-Z0-9]+', '-', str(text)).strip('-').lower()
     return text or 'schema'
+
+
+def _annotation_list(value) -> list:
+    """
+    Normalise a multi-valued annotation to a list of strings. Accepts the
+    current format (a single ', '-joined string), the legacy format (a YAML
+    list), the expanded LinkML form ({'value': ...}), or None.
+    """
+    if value is None:
+        return []
+    if isinstance(value, dict):
+        value = value.get('value')
+        if value is None:
+            return []
+    if isinstance(value, (list, tuple)):
+        return [str(v).strip() for v in value if str(v).strip()]
+    return [v.strip() for v in str(value).split(ANNOTATION_LIST_SEP.strip()) if v.strip()]
 
 
 def _study_id_from_schema(schema: dict, filename: str) -> str:
@@ -198,7 +224,9 @@ def _render_study_page(schema: dict, filename: str) -> str:
                 ann.get('value_counts', ''),
                 slot_def.get('comments') or [],
             )
-            variable_ids_cell = _md_escape_cell(', '.join(ann.get('variable_ids') or []))
+            variable_ids_cell = _md_escape_cell(
+                ', '.join(_annotation_list(ann.get('variable_ids')))
+            )
             row = [
                 f'`{slot_key}`',
                 variable_ids_cell,

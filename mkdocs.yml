@@ -5,8 +5,12 @@ nav:
 - Home: index.md
 - Studies:
   - phs000179: studies/phs000179.md
-  - phs000280: studies/phs000280.md
+  - phs000200: studies/phs000200.md
   - phs000285: studies/phs000285.md
+  - phs000286: studies/phs000286.md
+  - phs000810: studies/phs000810.md
+  - phs001119: studies/phs001119.md
+  - phs001662: studies/phs001662.md
 markdown_extensions:
 - tables
 - attr_list
